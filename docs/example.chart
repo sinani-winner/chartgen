@@ -1,0 +1,25 @@
+# 예시 정답 차트 (PLAN.md 3장 예시를 이 형식으로 옮긴 것)
+Title: 예시곡 (라이브)
+URL: https://www.youtube.com/watch?v=XXXXXXXXXXX
+Key: G   BPM ≈ 72 (가변)   4/4
+
+[Intro] (free)
+| G | Cmaj7 | Em7 | Dsus4 D |
+
+[Verse 1]
+| G | D/F# | Em7 | Cmaj7 |
+| G/B | C | Am7 | Dsus4 D |
+
+[Chorus] x2
+| C | D | Em7 D/F# | G |
+| C | D | Bm7 | Em7 |
+| C | D | G/B C | D |
+
+[Key Up → Ab]
+[Chorus]
+| >Db | Eb | Fm7 Eb/G | Ab |     # '>' = Db가 앞 마디 4박 뒷박(8분음표 하나 앞)에 미리 들어옴
+| Db | Eb | Cm7 | Fm7 |
+| Db | Eb | Ab/C Db | Eb (stop) |
+
+[Outro]
+| Ab . . . | Db@1 Eb@2.5 | Ab |

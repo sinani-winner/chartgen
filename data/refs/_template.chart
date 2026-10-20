@@ -1,0 +1,14 @@
+# 정답 차트 템플릿 — 복사해서 <곡이름>.chart 로 저장 (이 파일은 '_'로 시작해서 채점에서 제외됨)
+# 형식 설명: docs/CHART_FORMAT.md   입력 확인: python check_chart.py data/refs/<곡이름>.chart
+Title:
+URL:
+Key: G   BPM: 72   4/4
+
+[Intro]
+| G | C | G | D |
+
+[Verse 1]
+| G | D/F# | Em7 | C |
+
+[Chorus]
+| C | D | G | G |

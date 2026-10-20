@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+# 유튜브 오디오/분리 음원은 분석 후 삭제, 절대 커밋하지 않음
+audio/
+stems/
+*.wav
+*.mp3
+*.m4a
+*.webm
+*.flac
