@@ -1,22 +1,21 @@
-# 영상 링크 (곡과 짝 미확인)
+# 영상 링크 (짝 확인 완료, 2026-10-21)
 
-사용자가 준 5개 링크. 순서는 리드시트와 무관하게 섞여 있음.
-이 클라우드 환경에서는 유튜브 접속이 막혀 있어 제목을 확인하지 못함.
+유튜브 oEmbed 제목 + 리드시트 가사로 확인. 원래 링크(YouTube Music 'Topic' 음원)는 한국 지역 전용이라
+해외 서버에서는 재생 불가 → 같은 라이브 녹음의 공식 영상 링크도 함께 적어 둠.
 
-- https://music.youtube.com/watch?v=4s2gkXNT12U
-- https://music.youtube.com/watch?v=peR2VsZ_nn0
-- https://music.youtube.com/watch?v=qvxLFxZrllk
-- https://music.youtube.com/watch?v=qottXwI4i70
-- https://music.youtube.com/watch?v=zlARGeUWd5o
+| 파일 | 곡 | 원래 링크 (Topic) | 공식 영상 (ANOINTING 채널) |
+|---|---|---|---|
+| AnointingHymns3_04 | 갈 길을 밝히 보이시니 + 내게 강 같은 평화 | 4s2gkXNT12U | 08F4mCbyc2k |
+| AWC2022_05 | 목마른 사슴이 | zlARGeUWd5o | ele4YXY84lY |
+| AWC2022_16 | 나는 믿네 (사도신경) This I Believe | peR2VsZ_nn0 | ZLSElx0aq_Y |
+| AWC2023_14 | 어둔 날 다 지나고 (박은총) | qvxLFxZrllk | ZdMKZNfeNn8 |
+| AWC2025_03 | 예수 나의 첫사랑 되시네 | qottXwI4i70 | V0RNjPbgOhA |
 
-## 짝 맞추는 방법
-1. 제목을 보면 바로 구분됨 (사람이 확인).
-2. 오디오 접근이 가능해지면 시작 키·템포로 자동 구분 가능 — 5곡이 모두 다름:
+- AWC2023_14 는 처음에 「우리 가는 이 길」로 잘못 적혀 있었음. 리드시트 가사 첫 줄이 "어둔 날 다 지나고".
+- 링크: https://music.youtube.com/watch?v=<원래 링크>, https://www.youtube.com/watch?v=<공식 영상>
+- Topic 음원과 공식 영상의 녹음이 정확히 같은지는 아직 확인 안 함 (길이로 확인 예정).
 
-| 파일 | 곡 | 시작 키 | BPM | 비고 |
-|---|---|---|---|---|
-| AnointingHymns3_04 | 갈 길을 밝히 보이시니 + 내게 강 같은 평화 | G | 108 | 전조 없음 |
-| AWC2022_05 | 목마른 사슴이 (천관웅) | F | 104 | 중간에 G로 전조 |
-| AWC2022_16 | This I Believe (The Creed) | G | 77 | 후반 A로 전조 |
-| AWC2023_14 | 우리 가는 이 길 (박은총) | D | 84 | 셔플 |
-| AWC2025_03 | 예수 나의 첫사랑 되시네 (Jesus You Alone) | A | 150 | 푸시 많음 |
+오디오 받기 (맥, 파일 이름 = 정답 차트 이름):
+```
+yt-dlp -x --audio-format mp3 -o "audio/AWC2022_05.%(ext)s" "https://music.youtube.com/watch?v=zlARGeUWd5o"
+```
