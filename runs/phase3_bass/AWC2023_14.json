@@ -1,0 +1,2156 @@
+{
+ "format": "chartgen/1",
+ "meta": {
+  "time": [
+   4,
+   4
+  ],
+  "key": "D",
+  "title": "어둔 날 다 지나고 (박은총) — 어노인팅 AWC2023",
+  "url": "https://music.youtube.com/watch?v=qvxLFxZrllk"
+ },
+ "sections": [
+  {
+   "name": "Song",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "N.C."
+      }
+     ],
+     "start_sec": 0.28
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 3.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.83
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 5.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 8.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 11.68
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 14.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.88
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 17.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.9
+      }
+     ],
+     "start_sec": 20.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.83
+      }
+     ],
+     "start_sec": 23.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 25.96
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.9
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 28.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 31.68
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.87
+      }
+     ],
+     "start_sec": 34.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ],
+     "start_sec": 37.38
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.89
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 40.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 43.1
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 45.96
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.52
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/G",
+       "conf": 0.69
+      }
+     ],
+     "start_sec": 48.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.83
+      }
+     ],
+     "start_sec": 51.68
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.93
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 54.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G/B",
+       "conf": 0.56
+      },
+      {
+       "beat": 3.0,
+       "chord": "A",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 57.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.5
+      },
+      {
+       "beat": 3.0,
+       "chord": "A",
+       "conf": 0.79
+      }
+     ],
+     "start_sec": 60.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#",
+       "conf": 0.91
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm/A",
+       "conf": 0.51
+      }
+     ],
+     "start_sec": 63.12
+    },
+    {
+     "time": [
+      2,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.94
+      }
+     ],
+     "start_sec": 65.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.79
+      },
+      {
+       "beat": 3.0,
+       "chord": "Gm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 67.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.85
+      }
+     ],
+     "start_sec": 70.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 73.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 75.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.96
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.88
+      }
+     ],
+     "start_sec": 78.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "Am",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 81.68
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      },
+      {
+       "beat": 3.0,
+       "chord": "A",
+       "conf": 0.56
+      }
+     ],
+     "start_sec": 84.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.96
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.74
+      }
+     ],
+     "start_sec": 87.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 90.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm",
+       "conf": 0.93
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 93.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 95.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.72
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.77
+      }
+     ],
+     "start_sec": 98.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.5
+      }
+     ],
+     "start_sec": 101.68
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 104.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 107.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.85
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 110.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.65
+      }
+     ],
+     "start_sec": 113.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 115.96
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.85
+      }
+     ],
+     "start_sec": 118.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.91
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 121.68
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.75
+      }
+     ],
+     "start_sec": 124.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.85
+      }
+     ],
+     "start_sec": 127.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.55
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/G",
+       "conf": 0.8
+      }
+     ],
+     "start_sec": 130.26
+    },
+    {
+     "time": [
+      2,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 133.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A#",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "G",
+       "conf": 0.86
+      }
+     ],
+     "start_sec": 134.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D/F#",
+       "conf": 0.52
+      },
+      {
+       "beat": 3.0,
+       "chord": "Em",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 137.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.56
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.77
+      }
+     ],
+     "start_sec": 140.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A/G",
+       "conf": 0.98
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.6
+      }
+     ],
+     "start_sec": 143.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.73
+      },
+      {
+       "beat": 3.0,
+       "chord": "Em",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 145.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D/F#",
+       "conf": 0.8
+      },
+      {
+       "beat": 3.0,
+       "chord": "Gm",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 148.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.72
+      }
+     ],
+     "start_sec": 151.7
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 154.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#",
+       "conf": 0.98
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 157.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.91
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.78
+      }
+     ],
+     "start_sec": 160.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.96
+      },
+      {
+       "beat": 3.0,
+       "chord": "Em",
+       "conf": 0.58
+      }
+     ],
+     "start_sec": 163.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.86
+      }
+     ],
+     "start_sec": 165.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D/F#",
+       "conf": 0.68
+      },
+      {
+       "beat": 3.0,
+       "chord": "F",
+       "conf": 0.72
+      }
+     ],
+     "start_sec": 168.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.89
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.83
+      }
+     ],
+     "start_sec": 171.7
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm",
+       "conf": 0.9
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm/A",
+       "conf": 0.59
+      }
+     ],
+     "start_sec": 174.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 177.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#",
+       "conf": 0.96
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 180.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.6
+      }
+     ],
+     "start_sec": 183.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.94
+      },
+      {
+       "beat": 3.0,
+       "chord": "A",
+       "conf": 0.83
+      }
+     ],
+     "start_sec": 185.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      },
+      {
+       "beat": 3.0,
+       "chord": "Am",
+       "conf": 0.75
+      }
+     ],
+     "start_sec": 188.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D/F#",
+       "conf": 0.56
+      }
+     ],
+     "start_sec": 191.7
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.94
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 194.56
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm",
+       "conf": 0.95
+      },
+      {
+       "beat": 3.0,
+       "chord": "Em",
+       "conf": 0.64
+      }
+     ],
+     "start_sec": 197.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 200.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.71
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.83
+      }
+     ],
+     "start_sec": 203.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.83
+      }
+     ],
+     "start_sec": 205.96
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.75
+      },
+      {
+       "beat": 3.0,
+       "chord": "C#m/E",
+       "conf": 0.78
+      }
+     ],
+     "start_sec": 208.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.88
+      }
+     ],
+     "start_sec": 211.7
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m/A",
+       "conf": 0.54
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.68
+      }
+     ],
+     "start_sec": 214.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.96
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.9
+      }
+     ],
+     "start_sec": 217.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 220.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D/F#",
+       "conf": 0.64
+      }
+     ],
+     "start_sec": 223.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.96
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 225.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 228.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.8
+      }
+     ],
+     "start_sec": 231.7
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.71
+      }
+     ],
+     "start_sec": 234.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 237.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.73
+      }
+     ],
+     "start_sec": 240.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 243.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.64
+      },
+      {
+       "beat": 3.0,
+       "chord": "Dm",
+       "conf": 0.9
+      }
+     ],
+     "start_sec": 245.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.93
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 248.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 251.7
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.85
+      }
+     ],
+     "start_sec": 254.56
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 257.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.7
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 260.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.66
+      }
+     ],
+     "start_sec": 263.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.78
+      }
+     ],
+     "start_sec": 265.98
+    },
+    {
+     "time": [
+      2,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.55
+      }
+     ],
+     "start_sec": 268.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 270.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.66
+      },
+      {
+       "beat": 3.0,
+       "chord": "G",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 273.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D/F#",
+       "conf": 0.88
+      },
+      {
+       "beat": 3.0,
+       "chord": "Em",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 275.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.9
+      },
+      {
+       "beat": 3.0,
+       "chord": "D",
+       "conf": 0.59
+      }
+     ],
+     "start_sec": 278.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.9
+      }
+     ],
+     "start_sec": 281.7
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A#",
+       "conf": 0.53
+      },
+      {
+       "beat": 3.0,
+       "chord": "Em",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 284.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.6
+      },
+      {
+       "beat": 3.0,
+       "chord": "Gm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 287.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.71
+      }
+     ],
+     "start_sec": 290.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.69
+      },
+      {
+       "beat": 3.0,
+       "chord": "N.C."
+      }
+     ],
+     "start_sec": 293.1
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "N.C."
+      }
+     ],
+     "start_sec": 295.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "N.C."
+      }
+     ],
+     "start_sec": 298.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "N.C."
+      }
+     ],
+     "start_sec": 301.68
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.76
+      }
+     ],
+     "start_sec": 304.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.72
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.64
+      }
+     ],
+     "start_sec": 307.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.8
+      }
+     ],
+     "start_sec": 310.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm",
+       "conf": 0.95
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm/A",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 313.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 315.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#",
+       "conf": 0.96
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 318.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.89
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.8
+      }
+     ],
+     "start_sec": 321.68
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.94
+      },
+      {
+       "beat": 3.0,
+       "chord": "A",
+       "conf": 0.83
+      }
+     ],
+     "start_sec": 324.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      },
+      {
+       "beat": 3.0,
+       "chord": "A",
+       "conf": 0.61
+      }
+     ],
+     "start_sec": 327.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G",
+       "conf": 0.8
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.62
+      }
+     ],
+     "start_sec": 330.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.93
+      },
+      {
+       "beat": 3.0,
+       "chord": "D/F#",
+       "conf": 0.62
+      }
+     ],
+     "start_sec": 333.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm",
+       "conf": 0.92
+      },
+      {
+       "beat": 3.0,
+       "chord": "A",
+       "conf": 0.7
+      }
+     ],
+     "start_sec": 335.98
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 338.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 341.68
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      },
+      {
+       "beat": 3.0,
+       "chord": "Em",
+       "conf": 0.67
+      }
+     ],
+     "start_sec": 344.54
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.76
+      }
+     ],
+     "start_sec": 347.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.62
+      }
+     ],
+     "start_sec": 350.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.92
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 353.12
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.54
+      }
+     ],
+     "start_sec": 355.96
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 358.84
+    },
+    {
+     "time": [
+      1,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.66
+      }
+     ],
+     "start_sec": 361.88
+    }
+   ]
+  }
+ ]
+}

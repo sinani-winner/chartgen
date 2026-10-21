@@ -25,13 +25,15 @@ chartgen/chords.py    코드 기호 파싱 (근음·성격·베이스, 이명동
 chartgen/chart.py     차트 텍스트/JSON 형식, 반복 펼치기, 8분음표 타임라인
 chartgen/scoring.py   항목별 채점 (마디 정렬 → 근음/타이밍/성격/베이스/구성/키/가짜)
 chartgen/audio.py     오디오 → 음원 분리(htdemucs_6s) + 박자(beat_this) + 스템별 CQT → cache/<곡>/features.npz
-chartgen/harmony.py   8분음표 박자 축, 크로마/베이스, 근음 Viterbi (위치별 체인지 벌점), 키 추정
+chartgen/harmony.py   8분음표 박자 축, 크로마/베이스, (코드×베이스) Viterbi (위치별 체인지 벌점), 키 추정
 chartgen/assemble.py  인식 결과 → 차트 (오프비트 체인지 = 푸시 '>')
 transcribe.py         인식 CLI (오디오 → runs/<방법>/곡.json)
 evaluate.py           채점 CLI (+ EXPERIMENTS.md 기록)
 check_chart.py        정답 입력 확인 CLI
 data/refs/*.chart     정답 세트 (사람이 입력, 형식: docs/CHART_FORMAT.md)
 runs/<방법>/*.json    방법별 예측 결과 (정답과 같은 파일 이름)
+tools/tune.py         캐시로 Params 탐색 / 한 곡씩 빼고 튜닝(--loo)
+tools/diagnose.py     근음 오류 유형 분석
 tests/                pytest
 ```
 
@@ -58,3 +60,11 @@ tests/                pytest
 - 정답 세트는 리드시트 기준이라 라이브에서 더 부른 반복(예: AWC2022_05 후렴 +16마디, 엔딩 +10마디)은 정답에 없다.
   반복 기호 해석 문제는 아님 (리드시트 확인함). 남는 마디는 가짜 체인지 수에만 반영된다.
 - 남은 큰 오류 (Phase 3에서): 분수코드 베이스를 근음으로 잡음 (D/E → E, C/E → C 등). 근음은 화성 스템, 베이스는 베이스 스템으로 따로 정해야 함.
+
+## Phase 3 메모 (2026-10-21: 근음 77.6 / 베이스 76.4→87.9 / 3화음 96.8 / 타이밍F 91.5, 한 곡씩 빼고 튜닝 시 근음 75.5)
+- 사용자 기준: 7th보다 3화음 중심. 출력 = 장/단 3화음 + 분수 베이스. 채점표에 `3화음`(7th 무시 성격) 칸 추가.
+- 상태 = 24코드 × 베이스 종류(근음·3음·5음·온음 위·b7) + N.C. 근음은 화성 스템, 베이스 음은 베이스 스템이 정한다.
+  베이스 종류별 사전 비용(prior_*)으로 근음 위치를 기본으로 두고, 베이스만 바뀌면 bass_change × 위치 벌점.
+- 해 봤는데 효과 없어서 뺀 것: 3음 대비 항(근음 급락), D/E 상태에 7sus4 모양 허용(변화 없음), 화성 음역 하한 올리기(악화).
+- 남은 오류: AWC2025_03의 D/E를 밴드가 E·A·B·D(sus)로 쳐서 E로 읽힘(271프레임), X/3음 ↔ 3음 단3화음 혼동(A/C#→C#m, G/B→Bm),
+  AWC2023_14 Gmaj7→Bm (프리코러스·후렴에 몰림, 라이브 편곡 차이일 수도 — 귀로 확인 필요).

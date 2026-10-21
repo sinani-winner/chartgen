@@ -31,6 +31,7 @@ COLUMNS = [  # (key, header, kind)
     ("timing_f", "2타이밍F", "pct"),
     ("timing_f_exact", "2정확", "pct"),
     ("quality", "3성격", "pct"),
+    ("quality_triad", "3화음", "pct"),   # 7th 빼고 장/단/sus만 비교 (사용자 기준: 3화음 중심)
     ("bass", "4베이스", "pct"),
     ("form_boundary_f", "5경계F", "pct"),
     ("form_seq", "5순서", "pct"),

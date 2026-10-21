@@ -93,3 +93,33 @@ def test_key_estimate_major():
     for pc, w in [(7, 3), (11, 1), (2, 2), (0, 1.5), (4, 1), (9, 1), (6, 0.7)]:
         prof[pc] = w
     assert estimate_key(prof) == (7, False)
+
+
+def render_slash(chords, bpm=100.0):
+    """chords: (start_8th, root_pc, minor, bass_pc) — harmony triad over an explicit bass note."""
+    eighth = 30 / bpm
+    n8 = chords[-1][0] + 8
+    total = n8 * eighth + 0.5
+    bass = np.zeros(int(total * SR))
+    harm = np.zeros_like(bass)
+    for i, (s, r, m, b) in enumerate(chords):
+        e = chords[i + 1][0] if i + 1 < len(chords) else n8
+        ia, d = int(s * eighth * SR), (e - s) * eighth
+        x = tone(36 + b, d, amp=0.4)
+        bass[ia:ia + len(x)] += x
+        for iv in (0, 3 if m else 4, 7):
+            h = tone(60 + (r + iv) % 12, d)
+            harm[ia:ia + len(h)] += h
+    beats = np.arange(0, n8, 2) * eighth
+    return bass, harm, beats, beats[::4], total
+
+
+def test_slash_chords_keep_the_harmony_root():
+    # | C | C/E | D/E | G |  — the bass note must not become the root
+    seq = [(0, 0, False, 0), (8, 0, False, 4), (16, 2, False, 4), (24, 7, False, 7)]
+    feats = feats_from(*render_slash(seq))
+    path, conf, grid, key = recognize(feats)
+    chart = build_chart(path, conf, grid, key)
+    s = score(parse_chart("Key: G\n| C | C/E | D/E | G |"), chart).metrics
+    assert s["root"] >= 0.95, chart.to_text()
+    assert s["bass"] >= 0.95, chart.to_text()

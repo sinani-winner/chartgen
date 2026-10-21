@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from .chart import Bar, Chart, Event, Section
 from .chords import PC_NAMES_FLAT, PC_NAMES_SHARP, parse_chord
-from .harmony import NC, Grid, chord_is_minor
+from .harmony import NC, Grid, chord_is_minor, state_bass, state_chord
 
 SHARP_KEYS_MAJOR = {7, 2, 9, 4, 11, 6}    # G D A E B F#
 SHARP_KEYS_MINOR = {4, 11, 6, 1, 8}       # Em Bm F#m C#m G#m
@@ -15,12 +15,18 @@ def key_name(tonic: int, minor: bool) -> str:
 
 
 def chord_name(idx: int, key: tuple) -> str:
+    """State index → chord symbol spelled for the key (slash bass when bass ≠ root)."""
     if idx == NC:
         return "N.C."
     tonic, minor = key
     sharp = tonic in (SHARP_KEYS_MINOR if minor else SHARP_KEYS_MAJOR)
     names = PC_NAMES_SHARP if sharp else PC_NAMES_FLAT
-    return names[idx % 12] + ("m" if chord_is_minor(idx) else "")
+    c = state_chord(idx)
+    name = names[c % 12] + ("m" if chord_is_minor(idx) else "")
+    b = state_bass(idx)
+    if b != c % 12:
+        name += "/" + names[b]
+    return name
 
 
 def build_chart(path, conf, grid: Grid, key: tuple, meta: dict | None = None,

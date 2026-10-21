@@ -3,7 +3,7 @@
     python3 tools/tune.py                     # 기본값 점수
     python3 tools/tune.py --sweep             # 좌표 탐색 (한 번에 값 하나씩 바꿔 가며)
 
-목표 = 근음 + 0.5*타이밍F - 0.002*가짜체인지(100마디당 x100) — 근음이 최우선 (PLAN.md 1장 순위).
+목표 = 근음 + 0.5*타이밍F + 0.5*베이스 - 0.002*가짜체인지(100마디당 x100) — 근음이 최우선 (PLAN.md 1장 순위).
 5곡뿐이라 과적합 위험: 곡별 점수도 같이 보고, 한 곡만 크게 오르는 변경은 의심할 것.
 """
 import argparse
@@ -21,7 +21,11 @@ from chartgen.scoring import score  # noqa: E402
 
 GRID = {
     "w_bass": [0.4, 0.6, 0.8, 1.0, 1.2],
-    "w_bass_tone": [0.2, 0.4, 0.6, 0.8],
+    "prior_third": [0.0, 0.1, 0.2, 0.3],
+    "prior_fifth": [0.1, 0.3, 0.5],
+    "prior_whole": [0.1, 0.25, 0.4],
+    "prior_b7": [0.2, 0.4, 0.8],
+    "bass_change": [0.6, 1.0, 1.5],
     "seventh_w": [0.6, 0.8, 1.0, 1.2],
     "third_w": [0.8, 1.0, 1.2, 1.4],
     "fifth_w": [0.6, 0.8, 1.0],
@@ -33,7 +37,7 @@ GRID = {
 }
 
 # 튜닝 전 처음 값 (과적합 점검은 여기서 출발)
-START = Params(w_bass=0.8, w_bass_tone=0.0, seventh_w=0.0, third_w=0.8, fifth_w=0.7, pen_bar=0.6,
+START = Params(w_bass=0.8, prior_third=9, prior_fifth=9, prior_whole=9, prior_b7=9,  seventh_w=0.0, third_w=0.8, fifth_w=0.7, pen_bar=0.6,
                pen_half=1.0, pen_beat=1.8, pen_push_bar=1.0, pen_push_half=1.6)
 
 
@@ -56,14 +60,15 @@ def evaluate(songs, p):
     n = len(per)
     root = sum(m["root"] for m in per.values()) / n
     tim = sum(m["timing_f"] for m in per.values()) / n
+    bass = sum(m["bass"] for m in per.values()) / n
     fc = sum(m["false_changes"] for m in per.values()) / max(1, sum(m["bars_ref"] for m in per.values())) * 100
-    return root + 0.5 * tim - 0.002 * fc, root, tim, fc, per
+    return root + 0.5 * tim + 0.5 * bass - 0.002 * fc, root, tim, fc, per, bass
 
 
 def show(tag, res):
-    obj, root, tim, fc, per = res
-    songs = " ".join(f"{k[:10]}:{100*m['root']:.0f}" for k, m in per.items())
-    print(f"{tag:38s} 목표 {obj:.4f} | 근음 {100*root:5.1f} 타이밍 {100*tim:5.1f} 가짜/100마디 {fc:4.1f} | {songs}", flush=True)
+    obj, root, tim, fc, per, bass = res
+    songs = " ".join(f"{k[:10]}:{100*m['root']:.0f}/{100*m['bass']:.0f}" for k, m in per.items())
+    print(f"{tag:30s} 목표 {obj:.4f} | 근음 {100*root:5.1f} 베이스 {100*bass:5.1f} 타이밍 {100*tim:5.1f} 가짜 {fc:4.1f} | {songs}", flush=True)
 
 
 def main():

@@ -19,15 +19,38 @@ from dataclasses import dataclass, field
 import numpy as np
 
 N_CHORDS = 24           # 0-11 major on root, 12-23 minor on root
-NC = 24                 # no chord
+# Bass options per chord (Phase 3). State = chord * N_BASS + bass type; NC is last.
+BASS_TYPES = ("root", "third", "fifth", "whole", "b7")   # C, C/E, C/G, C/D (D/E 꼴), C/Bb (A/G 꼴)
+N_BASS = len(BASS_TYPES)
+NC = N_CHORDS * N_BASS  # no chord
 
 
-def chord_root(i: int) -> int | None:
-    return None if i == NC else i % 12
+def state_chord(s: int) -> int | None:
+    """State → chord index 0..23 (None for N.C.)."""
+    return None if s == NC else s // N_BASS
 
 
-def chord_is_minor(i: int) -> bool:
-    return 12 <= i < 24
+def bass_offset(chord: int, btype: int) -> int:
+    third = 3 if chord >= 12 else 4
+    return (0, third, 7, 2, 10)[btype]
+
+
+def state_bass(s: int) -> int | None:
+    """State → bass pitch class."""
+    c = state_chord(s)
+    if c is None:
+        return None
+    return (c % 12 + bass_offset(c, s % N_BASS)) % 12
+
+
+def chord_root(s: int) -> int | None:
+    c = state_chord(s)
+    return None if c is None else c % 12
+
+
+def chord_is_minor(s: int) -> bool:
+    c = state_chord(s)
+    return c is not None and c >= 12
 
 
 # ------------------------------------------------------------------ grid
@@ -152,7 +175,7 @@ def fold_chroma(semitones: np.ndarray, fmin_midi: int) -> np.ndarray:
 
 
 def harmonic_chroma(pooled: dict, fmin_midi: int, stems=("guitar", "piano", "other"),
-                    peak: float | None = 0.5) -> np.ndarray:
+                    peak: float | None = 0.5, lo_midi: int = 36) -> np.ndarray:
     """Chroma of the harmony instruments, roughly C2..C6 (vocals excluded).
     peak: compression exponent after semitone peak picking (None = old log path)."""
     acc = None
@@ -167,7 +190,7 @@ def harmonic_chroma(pooled: dict, fmin_midi: int, stems=("guitar", "piano", "oth
         acc = pooled["mix"].copy()
         if peak is not None:
             acc = np.expm1(np.maximum(acc, 0)) / 100.0
-    lo = max(0, 36 - fmin_midi)          # C2
+    lo = max(0, lo_midi - fmin_midi)     # below this the keys' left hand mostly doubles the bass
     hi = min(acc.shape[1], 84 - fmin_midi)  # C6
     acc[:, :lo] = 0
     acc[:, hi:] = 0
@@ -257,17 +280,22 @@ def chord_templates(third_w=0.8, fifth_w=0.7, seventh_w=0.0) -> np.ndarray:
 class Params:
     w_harm: float = 1.0          # harmonic-stem chroma match
     w_bass: float = 0.6          # bass pitch class == root
-    w_bass_tone: float = 0.4     # bass on the 3rd/5th (inversion, C/E, C/G) — partial credit
+    # bass-type priors (subtracted): how much evidence a slash chord needs over root position
+    prior_third: float = 0.1
+    prior_fifth: float = 0.5
+    prior_whole: float = 0.4
+    prior_b7: float = 0.2
+    bass_change: float = 1.0     # bass-only change costs this × the position penalty
     third_w: float = 1.2
     fifth_w: float = 1.0
-    seventh_w: float = 0.6       # >0: also match 7th-shaped voicings (label stays a triad)
+    seventh_w: float = 0.8       # >0: also match 7th-shaped voicings (label stays a triad)
     nc_level: float = 0.15       # score of N.C. (beats chords only when everything is quiet)
     silence_rel: float = 0.08    # frame energy below this * median → treated as silence
     # change penalties by 8th-note position in a 4/4 bar
     pen_bar: float = 0.1         # beat 1
     pen_half: float = 0.6        # beat 3
     pen_beat: float = 2.5        # beats 2, 4
-    pen_push_bar: float = 0.5    # "and" of 4 → push into next bar
+    pen_push_bar: float = 1.2    # "and" of 4 → push into next bar
     pen_push_half: float = 2.5   # "and" of 2 → push into beat 3
     pen_offbeat: float = 4.0     # any other off-beat
     smooth: int = 0              # emission smoothing radius (frames); >0 blurs pushes
@@ -290,42 +318,63 @@ def position_penalty(pos: int, beats_in_bar: int, p: Params) -> float:
 
 
 def emissions(harm: np.ndarray, bass_sal: np.ndarray, energy: np.ndarray, p: Params) -> np.ndarray:
-    """(n_frames, 25) score of each chord per 8th-note frame (higher is better)."""
+    """(n_frames, N_CHORDS*N_BASS + 1) score of each (chord, bass) state per 8th note.
+
+    Chord identity comes from the harmony stems; the bass term only asks
+    "is this state's bass note what the bass is playing?". So D over an E bass
+    is explained as D/E instead of turning the root into E."""
     H = normalize_rows(harm)
     T, lab = chord_templates(p.third_w, p.fifth_w, p.seventh_w)
     S = H @ T.T                                                    # cosine per variant
-    E = np.full((len(H), N_CHORDS), -np.inf, np.float32)
+    C = np.full((len(H), N_CHORDS), -np.inf, np.float32)
     for v, l in enumerate(lab):
-        E[:, l] = np.maximum(E[:, l], S[:, v])
-    E *= p.w_harm
+        C[:, l] = np.maximum(C[:, l], S[:, v])
+    C *= p.w_harm
     B = bass_sal / np.maximum(bass_sal.sum(1, keepdims=True), 1e-6)
+    prior = (0.0, p.prior_third, p.prior_fifth, p.prior_whole, p.prior_b7)
+    E = np.zeros((len(H), NC + 1), np.float32)
     for c in range(N_CHORDS):
-        r = c % 12
-        third = 3 if c >= 12 else 4
-        E[:, c] += p.w_bass * B[:, r] + p.w_bass_tone * (B[:, (r + third) % 12] + B[:, (r + 7) % 12])
+        for b in range(N_BASS):
+            pc = (c % 12 + bass_offset(c, b)) % 12
+            E[:, c * N_BASS + b] = C[:, c] + p.w_bass * B[:, pc] - prior[b]
     if p.smooth > 0:
         k = 2 * p.smooth + 1
         pad = np.pad(E, ((p.smooth, p.smooth), (0, 0)), mode="edge")
         E = np.stack([pad[i:i + len(E)] for i in range(k)]).mean(0)
-    nc = np.full((len(E), 1), p.nc_level, np.float32)
+    E[:, NC] = p.nc_level
     loud = energy > p.silence_rel * (np.median(energy[energy > 0]) if (energy > 0).any() else 1)
-    out = np.concatenate([E, nc], axis=1)
-    out[~loud, :N_CHORDS] = -1.0        # silence → N.C.
-    return out
+    E[~loud, :NC] = -1.0        # silence → N.C.
+    return E
 
 
-def viterbi(E: np.ndarray, change_pen: np.ndarray) -> np.ndarray:
-    """E (T, K) scores; change_pen (T,) cost of changing state at frame t."""
+def viterbi(E: np.ndarray, change_pen: np.ndarray, bass_change: float = 1.0) -> np.ndarray:
+    """E (T, K) scores with K = N_CHORDS*N_BASS + 1; change_pen (T,) cost of a
+    chord change at frame t. Changing only the bass under the same chord costs
+    bass_change × change_pen[t]."""
     T, K = E.shape
+    group = np.array([state_chord(k) if k != NC else N_CHORDS for k in range(K)])
     score = E[0].copy()
     back = np.zeros((T, K), np.int32)
+    idx = np.arange(K)
     for t in range(1, T):
-        best_prev = int(np.argmax(score))
-        switch = score[best_prev] - change_pen[t]
-        stay = score
-        use_switch = switch > stay
-        back[t] = np.where(use_switch, best_prev, np.arange(K))
-        score = np.where(use_switch, switch, stay) + E[t]
+        best_any = int(np.argmax(score))
+        # best state inside each chord group (states of a chord are contiguous)
+        blk = score[:NC].reshape(N_CHORDS, N_BASS)
+        arg = blk.argmax(1)
+        g_val = np.append(blk[np.arange(N_CHORDS), arg], score[NC])
+        g_best = np.append(np.arange(N_CHORDS) * N_BASS + arg, NC)
+        cand = score.copy()
+        bp = idx.copy()
+        sw = score[best_any] - change_pen[t]
+        use = sw > cand
+        cand = np.where(use, sw, cand)
+        bp = np.where(use, best_any, bp)
+        bsw = g_val[group] - bass_change * change_pen[t]
+        use = bsw > cand
+        cand = np.where(use, bsw, cand)
+        bp = np.where(use, g_best[group], bp)
+        back[t] = bp
+        score = cand + E[t]
     path = np.zeros(T, np.int32)
     path[-1] = int(np.argmax(score))
     for t in range(T - 1, 0, -1):
@@ -336,14 +385,15 @@ def viterbi(E: np.ndarray, change_pen: np.ndarray) -> np.ndarray:
 def decode(E: np.ndarray, grid: Grid, p: Params) -> np.ndarray:
     pen = np.array([position_penalty(int(pos), grid.bar_beats[int(b)], p)
                     for pos, b in zip(grid.frame_pos, grid.frame_bar)], np.float32)
-    return viterbi(E, pen)
+    return viterbi(E, pen, p.bass_change)
 
 
 def segment_confidence(E: np.ndarray, path: np.ndarray) -> np.ndarray:
-    """Per-frame confidence: margin of the chosen root over the best other root,
-    averaged over the segment, squashed to 0..1."""
+    """Per-frame confidence: margin of the chosen root over the best other root
+    (best state of each root), averaged over the segment, squashed to 0..1."""
     T = len(path)
     conf = np.ones(T, np.float32)
+    roots = np.array([chord_root(k) if k != NC else -1 for k in range(E.shape[1])])
     s = 0
     while s < T:
         e = s
@@ -351,11 +401,10 @@ def segment_confidence(E: np.ndarray, path: np.ndarray) -> np.ndarray:
             e += 1
         c = int(path[s])
         if c != NC:
-            seg = E[s:e, :N_CHORDS].mean(0)
-            root = c % 12
-            others = [seg[i] for i in range(N_CHORDS) if i % 12 != root]
-            margin = seg[c] - max(others)
-            conf[s:e] = float(1 / (1 + np.exp(-margin / 0.08)))
+            seg = E[s:e].mean(0)
+            r = roots[c]
+            other = seg[(roots != r) & (roots >= 0)].max()
+            conf[s:e] = float(1 / (1 + np.exp(-(seg[c] - other) / 0.08)))
         s = e
     return conf
 
@@ -381,12 +430,12 @@ def estimate_key(chroma_sum: np.ndarray) -> tuple:
 
 # ------------------------------------------------------------------ end to end
 
-def prepare(feats: dict, peak: float | None = 1.0):
+def prepare(feats: dict, peak: float | None = 1.0, harm_lo_midi: int = 36):
     """Cached features → (grid, harm chroma, bass salience, energy)."""
     sr, hop, fmin = int(feats["sr"]), int(feats["hop"]), int(feats["fmin_midi"])
     grid = make_grid(feats["beats"], feats["downbeats"], float(feats["duration"]))
     pooled = {k[4:]: pool_frames(v, grid, sr, hop) for k, v in feats.items() if k.startswith("cqt_")}
-    harm = harmonic_chroma(pooled, fmin, peak=peak)
+    harm = harmonic_chroma(pooled, fmin, peak=peak, lo_midi=harm_lo_midi)
     bass, _ = bass_salience(pooled, fmin, peak=peak)
     return grid, harm, bass, harm.sum(1) + bass.sum(1)
 
