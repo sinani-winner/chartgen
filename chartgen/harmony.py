@@ -43,7 +43,35 @@ class Grid:
     bar_first_frame: list = field(default_factory=list)
 
 
-def make_grid(beats, downbeats, duration=None, max_beats=7) -> Grid:
+def regularize_downbeats(n_beats: int, db_idx, meter=4, switch_cost=4.0, miss_cost=0.5):
+    """Pick one bar phase per beat so bars are `meter` beats long, changing phase
+    only where the tracker's downbeats clearly moved (e.g. a real 2/4 bar).
+
+    Fixes trackers that mark every 2nd beat as a downbeat in some sections.
+    Viterbi over beat position 0..meter-1: +1 for a detected downbeat at
+    position 0, -miss_cost for position 0 without one, -switch_cost to jump."""
+    det = np.zeros(n_beats, bool)
+    det[list(db_idx)] = True
+    emit = np.where(det, 1.0, -miss_cost)
+    score = np.where(np.arange(meter) == 0, emit[0], 0.0)
+    back = np.zeros((n_beats, meter), np.int32)
+    nxt = (np.arange(meter) - 1) % meter            # natural predecessor of each position
+    for i in range(1, n_beats):
+        stay = score[nxt]
+        best = int(np.argmax(score))
+        jump = score[best] - switch_cost
+        use_jump = jump > stay
+        back[i] = np.where(use_jump, best, nxt)
+        score = np.where(use_jump, jump, stay) + np.where(np.arange(meter) == 0, emit[i], 0.0)
+    pos = np.zeros(n_beats, np.int32)
+    pos[-1] = int(np.argmax(score))
+    for i in range(n_beats - 1, 0, -1):
+        pos[i - 1] = back[i, pos[i]]
+    out = [i for i in range(n_beats) if pos[i] == 0]
+    return out or [0]
+
+
+def make_grid(beats, downbeats, duration=None, max_beats=7, meter=4) -> Grid:
     beats = np.asarray(sorted(beats), float)
     downbeats = np.asarray(sorted(downbeats), float)
     if len(beats) < 2:
@@ -52,6 +80,8 @@ def make_grid(beats, downbeats, duration=None, max_beats=7) -> Grid:
         downbeats = beats[::4]
     # snap downbeats to the nearest beat
     db_idx = sorted({int(np.argmin(np.abs(beats - d))) for d in downbeats})
+    if meter:
+        db_idx = regularize_downbeats(len(beats), db_idx, meter)
     # final beat end: extrapolate one beat
     beat_end = np.append(beats[1:], beats[-1] + (beats[-1] - beats[-2]))
     if duration is not None:
@@ -98,6 +128,20 @@ def pool_frames(feat: np.ndarray, grid: Grid, sr: int, hop: int) -> np.ndarray:
 
 # ------------------------------------------------------------------ chroma
 
+def peak_semitones(x: np.ndarray, compress: float = 0.5) -> np.ndarray:
+    """Cached log-CQT (n, semitones) → linear magnitude kept only at local maxima
+    across semitones, then mildly compressed.
+
+    The cache stores log1p(100*|CQT|); log compression makes the leakage into
+    the neighbouring semitone look almost as loud as the note itself (an E bass
+    note showing up as D#). Peak picking in the linear domain removes that."""
+    lin = np.expm1(np.maximum(x, 0)) / 100.0
+    left = np.pad(lin, ((0, 0), (1, 0)))[:, :-1]
+    right = np.pad(lin, ((0, 0), (0, 1)))[:, 1:]
+    peak = (lin >= left) & (lin >= right)
+    return np.where(peak, lin, 0.0) ** compress
+
+
 def fold_chroma(semitones: np.ndarray, fmin_midi: int) -> np.ndarray:
     """(n, n_semitones) → (n, 12) pitch-class sum, column 0 = C."""
     n, S = semitones.shape
@@ -107,26 +151,36 @@ def fold_chroma(semitones: np.ndarray, fmin_midi: int) -> np.ndarray:
     return out
 
 
-def harmonic_chroma(pooled: dict, fmin_midi: int, stems=("guitar", "piano", "other")) -> np.ndarray:
-    """Chroma of the harmony instruments, roughly C2..C6 (vocals excluded)."""
+def harmonic_chroma(pooled: dict, fmin_midi: int, stems=("guitar", "piano", "other"),
+                    peak: float | None = 0.5) -> np.ndarray:
+    """Chroma of the harmony instruments, roughly C2..C6 (vocals excluded).
+    peak: compression exponent after semitone peak picking (None = old log path)."""
     acc = None
     for s in stems:
         x = pooled.get(s)
         if x is None:
             continue
+        if peak is not None:
+            x = np.expm1(np.maximum(x, 0)) / 100.0      # back to linear before summing stems
         acc = x.copy() if acc is None else acc + x
     if acc is None:
         acc = pooled["mix"].copy()
+        if peak is not None:
+            acc = np.expm1(np.maximum(acc, 0)) / 100.0
     lo = max(0, 36 - fmin_midi)          # C2
     hi = min(acc.shape[1], 84 - fmin_midi)  # C6
     acc[:, :lo] = 0
     acc[:, hi:] = 0
-    # remove per-frame floor so broadband noise doesn't flatten the chroma
-    acc = np.maximum(acc - np.median(acc, axis=1, keepdims=True), 0)
+    if peak is not None:
+        acc = peak_semitones(np.log1p(100.0 * acc), peak)
+    else:
+        # remove per-frame floor so broadband noise doesn't flatten the chroma
+        acc = np.maximum(acc - np.median(acc, axis=1, keepdims=True), 0)
     return fold_chroma(acc, fmin_midi)
 
 
-def bass_salience(pooled: dict, fmin_midi: int, fallback=("piano", "guitar")) -> tuple:
+def bass_salience(pooled: dict, fmin_midi: int, fallback=("piano", "guitar"),
+                  peak: float | None = 0.5) -> tuple:
     """Pitch-class salience of the lowest sounding note.
 
     Uses the bass stem's E1..B2 fundamentals. Where the bass is silent, falls
@@ -135,7 +189,10 @@ def bass_salience(pooled: dict, fmin_midi: int, fallback=("piano", "guitar")) ->
     def low_pc(x, lo_midi, hi_midi):
         a, b = max(0, lo_midi - fmin_midi), max(0, hi_midi - fmin_midi)
         seg = x[:, a:b]
-        seg = np.maximum(seg - np.median(seg, axis=1, keepdims=True), 0)
+        if peak is not None:
+            seg = peak_semitones(seg, peak)
+        else:
+            seg = np.maximum(seg - np.median(seg, axis=1, keepdims=True), 0)
         # weight lower notes more: the lowest strong partial is the bass note,
         # the octave/fifth above it are its harmonics
         w = np.linspace(1.0, 0.5, seg.shape[1])[None]
@@ -167,12 +224,31 @@ def normalize_rows(x: np.ndarray) -> np.ndarray:
 
 # ------------------------------------------------------------------ templates
 
-def chord_templates(third_w=0.8, fifth_w=0.7) -> np.ndarray:
-    T = np.zeros((N_CHORDS, 12), np.float32)
+def chord_templates(third_w=0.8, fifth_w=0.7, seventh_w=0.0) -> np.ndarray:
+    """(n_variants, 24 labels) → returns (T (V,12), label (V,)).
+
+    Output vocabulary is only major/minor triads, but a C chord played as Cmaj7
+    or C7 (and Am as Am7) should still score as C / Am rather than as the triad
+    hiding in its upper notes (Cmaj7 ⊃ Em). So each label gets extra 7th-shaped
+    variants when seventh_w > 0, and the label's score is the best variant."""
+    rows, labels = [], []
     for r in range(12):
-        T[r, [r, (r + 4) % 12, (r + 7) % 12]] = [1.0, third_w, fifth_w]
-        T[12 + r, [r, (r + 3) % 12, (r + 7) % 12]] = [1.0, third_w, fifth_w]
-    return normalize_rows(T)
+        for minor in (False, True):
+            third = 3 if minor else 4
+            base = {r: 1.0, (r + third) % 12: third_w, (r + 7) % 12: fifth_w}
+            variants = [base]
+            if seventh_w > 0:
+                for sev in ((10,) if minor else (11, 10)):
+                    v = dict(base)
+                    v[(r + sev) % 12] = seventh_w
+                    variants.append(v)
+            for v in variants:
+                t = np.zeros(12, np.float32)
+                for pc, w in v.items():
+                    t[pc] = w
+                rows.append(t)
+                labels.append(r + (12 if minor else 0))
+    return normalize_rows(np.array(rows)), np.array(labels)
 
 
 # ------------------------------------------------------------------ decoding
@@ -180,15 +256,19 @@ def chord_templates(third_w=0.8, fifth_w=0.7) -> np.ndarray:
 @dataclass
 class Params:
     w_harm: float = 1.0          # harmonic-stem chroma match
-    w_bass: float = 0.8          # bass pitch class == root
+    w_bass: float = 0.6          # bass pitch class == root
+    w_bass_tone: float = 0.4     # bass on the 3rd/5th (inversion, C/E, C/G) — partial credit
+    third_w: float = 1.2
+    fifth_w: float = 1.0
+    seventh_w: float = 0.6       # >0: also match 7th-shaped voicings (label stays a triad)
     nc_level: float = 0.15       # score of N.C. (beats chords only when everything is quiet)
     silence_rel: float = 0.08    # frame energy below this * median → treated as silence
     # change penalties by 8th-note position in a 4/4 bar
-    pen_bar: float = 0.6         # beat 1
-    pen_half: float = 1.0        # beat 3
-    pen_beat: float = 1.8        # beats 2, 4
-    pen_push_bar: float = 1.0    # "and" of 4 → push into next bar (임시값, 실제 오디오로 튜닝 필요)
-    pen_push_half: float = 1.6   # "and" of 2 → push into beat 3
+    pen_bar: float = 0.1         # beat 1
+    pen_half: float = 0.6        # beat 3
+    pen_beat: float = 2.5        # beats 2, 4
+    pen_push_bar: float = 0.5    # "and" of 4 → push into next bar
+    pen_push_half: float = 2.5   # "and" of 2 → push into beat 3
     pen_offbeat: float = 4.0     # any other off-beat
     smooth: int = 0              # emission smoothing radius (frames); >0 blurs pushes
 
@@ -212,9 +292,17 @@ def position_penalty(pos: int, beats_in_bar: int, p: Params) -> float:
 def emissions(harm: np.ndarray, bass_sal: np.ndarray, energy: np.ndarray, p: Params) -> np.ndarray:
     """(n_frames, 25) score of each chord per 8th-note frame (higher is better)."""
     H = normalize_rows(harm)
-    E = p.w_harm * (H @ chord_templates().T)                       # cosine
+    T, lab = chord_templates(p.third_w, p.fifth_w, p.seventh_w)
+    S = H @ T.T                                                    # cosine per variant
+    E = np.full((len(H), N_CHORDS), -np.inf, np.float32)
+    for v, l in enumerate(lab):
+        E[:, l] = np.maximum(E[:, l], S[:, v])
+    E *= p.w_harm
     B = bass_sal / np.maximum(bass_sal.sum(1, keepdims=True), 1e-6)
-    E += p.w_bass * np.concatenate([B, B], axis=1)
+    for c in range(N_CHORDS):
+        r = c % 12
+        third = 3 if c >= 12 else 4
+        E[:, c] += p.w_bass * B[:, r] + p.w_bass_tone * (B[:, (r + third) % 12] + B[:, (r + 7) % 12])
     if p.smooth > 0:
         k = 2 * p.smooth + 1
         pad = np.pad(E, ((p.smooth, p.smooth), (0, 0)), mode="edge")
@@ -293,15 +381,20 @@ def estimate_key(chroma_sum: np.ndarray) -> tuple:
 
 # ------------------------------------------------------------------ end to end
 
-def recognize(feats: dict, p: Params | None = None):
-    """Cached features → (path, conf, grid, key)."""
-    p = p or Params()
+def prepare(feats: dict, peak: float | None = 1.0):
+    """Cached features → (grid, harm chroma, bass salience, energy)."""
     sr, hop, fmin = int(feats["sr"]), int(feats["hop"]), int(feats["fmin_midi"])
     grid = make_grid(feats["beats"], feats["downbeats"], float(feats["duration"]))
     pooled = {k[4:]: pool_frames(v, grid, sr, hop) for k, v in feats.items() if k.startswith("cqt_")}
-    harm = harmonic_chroma(pooled, fmin)
-    bass, _ = bass_salience(pooled, fmin)
-    energy = harm.sum(1) + bass.sum(1)
+    harm = harmonic_chroma(pooled, fmin, peak=peak)
+    bass, _ = bass_salience(pooled, fmin, peak=peak)
+    return grid, harm, bass, harm.sum(1) + bass.sum(1)
+
+
+def recognize(feats: dict, p: Params | None = None, prepared=None):
+    """Cached features → (path, conf, grid, key)."""
+    p = p or Params()
+    grid, harm, bass, energy = prepared or prepare(feats)
     E = emissions(harm, bass, energy, p)
     path = decode(E, grid, p)
     conf = segment_confidence(E, path)
