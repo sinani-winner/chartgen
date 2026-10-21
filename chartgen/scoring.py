@@ -82,15 +82,24 @@ def align_bars(ref_tl: Timeline, pred_tl: Timeline):
 
 # ---------------------------------------------------------------- helpers
 
+def _dist(p, r):
+    """Distance from reference position r to a predicted position p,
+    where p is a number or a (lo, hi) range of equally valid positions."""
+    if isinstance(p, tuple):
+        lo, hi = p
+        return 0 if lo <= r <= hi else min(abs(r - lo), abs(r - hi))
+    return abs(p - r)
+
+
 def _match_points(ref_pts, pred_pts, tol_of):
-    """Greedy nearest matching. ref_pts: list of positions; pred_pts: positions or None.
-    tol_of(ref_index) -> tolerance. Returns number matched."""
+    """Greedy nearest matching. ref_pts: list of positions; pred_pts: positions,
+    (lo, hi) ranges, or None. tol_of(ref_index) -> tolerance. Returns number matched."""
     cands = []
     for i, r in enumerate(ref_pts):
         tol = tol_of(i)
         for j, p in enumerate(pred_pts):
-            if p is not None and abs(p - r) <= tol:
-                cands.append((abs(p - r), i, j))
+            if p is not None and _dist(p, r) <= tol:
+                cands.append((_dist(p, r), i, j))
     cands.sort()
     used_r, used_p = set(), set()
     for _, i, j in cands:
@@ -230,12 +239,16 @@ def score(ref: Chart, pred: Chart) -> SongScore:
         return [i for i in range(1, len(bars)) if bars[i].section_instance != bars[i - 1].section_instance]
 
     def map_pred_bar(p):
-        if p in p2r:
-            return p2r[p]
-        for q in range(p + 1, len(pb)):       # next aligned bar
-            if q in p2r:
-                return p2r[q]
-        return None
+        """Reference bar range a predicted bar's start corresponds to.
+        If reference bars were skipped right before it (a section the prediction
+        left out), the start may sit anywhere from the first skipped bar on."""
+        q = next((q for q in range(p, len(pb)) if q in p2r), None)   # this or next aligned bar
+        if q is None:
+            return None
+        hi = p2r[q]
+        prev = next((p2r[k] for k in range(p - 1, -1, -1) if k in p2r), -1)
+        lo = prev + 1
+        return (lo, hi) if lo < hi else hi
 
     rbnd = boundaries(rb)
     pbnd = [map_pred_bar(p) for p in boundaries(pb)]
@@ -272,7 +285,7 @@ def score(ref: Chart, pred: Chart) -> SongScore:
     used = set()
     for ri, rk in rmods:
         for j, (pi, pk) in enumerate(pmods):
-            if j not in used and pi is not None and abs(pi - ri) <= 1 and pk == rk:
+            if j not in used and pi is not None and _dist(pi, ri) <= 1 and pk == rk:
                 used.add(j)
                 mod_match += 1
                 break

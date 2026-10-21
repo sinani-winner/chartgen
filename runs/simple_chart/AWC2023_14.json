@@ -1,0 +1,1700 @@
+{
+ "format": "chartgen/1",
+ "meta": {
+  "time": [
+   4,
+   4
+  ],
+  "title": "우리 가는 이 길 (박은총) — 어노인팅 AWC2023",
+  "artist": "박은총",
+  "url": "https://music.youtube.com/watch?v=peR2VsZ_nn0",
+  "key": "D",
+  "bpm": 84.0
+ },
+ "sections": [
+  {
+   "name": "Intro",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Verse 1",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Pre-Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gb"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gb"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      2,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gb"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Interlude 1",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Verse 2",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Pre-Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gb"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gb"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      2,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 2,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gb"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Interlude 2",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Pre-Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gb"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gb"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      2,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 2,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gb"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "D"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Outro",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "G"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Gbm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "Bm"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A"
+      }
+     ]
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

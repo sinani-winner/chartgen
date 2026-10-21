@@ -1,0 +1,72 @@
+# 리드시트: data/leadsheets/AWC2025_03.pdf (Anointing Worship Camp 2025 #03)
+# A=Verse, B=Chorus, C=Bridge. 푸시 많음: '>코드' = 8분음표 하나 먼저 들어옴
+Title: 예수 나의 첫사랑 되시네 (Jesus You Alone) — 어노인팅 AWC2025
+Artist: Tim Hughes
+URL:                      # 미배정 — data/refs/LINKS.md 참고
+Key: A   BPM: 150   4/4
+
+[Intro]                   # 피아노
+| Bm7 A/C# | >D >E@3 | Bm7 A/C# | >D >E@3 |
+| Bm7 A/C# | >D >E@3 | Bm7 A/C# | >D E@3 |
+# 일렉 기타 & 스트링
+| Bm7 | D/E | C#m7 | F#m7 |
+| Bm7 | D/E | Bm7 A/C# | >D >D/E@3 |
+
+[Verse 1] x2              # A (반복 기호)
+| A | C#m7 | Bm7 | D/E |
+| A | C#m7 | Bm7 | D/E |
+
+[Chorus]                  # B (반복 직후 쉼표 마디 1개 포함)
+| . | Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 | D/E | A/C# | F#m7 |
+| Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 A/C# | >D >D/E@3 |
+
+[Interlude 1]
+| Bm7 | D/E | C#m7 | F#m7 |
+| Bm7 | D/E | Bm7 A/C# | >D >D/E@3 |
+
+[Verse 2] x2              # A
+| A | C#m7 | Bm7 | D/E |
+| A | C#m7 | Bm7 | D/E |
+
+[Chorus]                  # B, 1번 괄호
+| . | Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 | D/E | A/C# | F#m7 |
+| Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 A/C# | D D/E | A/C# | F#m7 |
+
+[Chorus]                  # B, 2번 괄호
+| Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 | D/E | A/C# | F#m7 |
+| Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 A/C# | >D >D/E@3 |
+
+[Interlude 2]
+| Bm7 A/C# | >D >D/E@3 | Bm7 A/C# | >D >D/E@3 |
+| Bm7 A/C# | >D >D/E@3 | Bm7 >A/C#?@3 D?@4 | D D/E?@1.5 |   # 마지막 두 마디 리듬은 악보상 애매
+
+[Bridge] x2               # C, 1·2번 괄호
+| Bm7 | A/C# | D | E |
+| Bm7 | A/C# | D | . |
+
+[Bridge]                  # C, 3번 괄호
+| Bm7 | A/C# | D | E |
+| Bm7 A/C# | D E | D | E |
+
+[Chorus]                  # B, 1번 괄호
+| Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 | D/E | A/C# | F#m7 |
+| Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 A/C# | D D/E | A/C# | F#m7 |
+
+[Chorus]                  # B, 2번 괄호
+| Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 | D/E | A/C# | F#m7 |
+| Bm7 | >D/E | A/C# | >F#m7 |
+| Bm7 A/C# | >D >D/E@3 |
+
+[Outro]
+| Bm7 | D/E | C#m7 | F#m7 |
+| Bm7 | D/E | Bm7 A/C# | >D >D/E@3 |
+| A |

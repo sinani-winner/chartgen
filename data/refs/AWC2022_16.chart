@@ -1,0 +1,55 @@
+# 리드시트: data/leadsheets/AWC2022_16.pdf (Anointing Worship Camp 2022 #16)
+# 구간 종류는 악보의 A/B/C 를 기능으로 해석: A=Verse, B=Chorus, C=Bridge
+Title: This I Believe (The Creed) — 어노인팅 AWC2022
+Artist: Ben Fielding, Matt Crocker
+URL:                      # 미배정 — data/refs/LINKS.md 참고
+Key: G   BPM: 77   4/4
+
+[Intro]
+| C | D G/B | C | D |
+| C | D G/B | C | D |
+
+[Verse 1] x2              # A1 (반복 기호)
+| C | D G/B | C | D |
+| C | D G/B | C | D |
+
+[Chorus]                  # B
+| G Am7 | G/B | C/E | Cm/Eb |
+| G/D | A7/C# | Am7 | F |
+
+[Interlude 1]
+| C | D G/B | C | D |
+
+[Verse 2]                 # A2
+| C | D G/B | C | D |
+| C | D G/B | C | D |
+
+[Chorus] x2               # B (반복 기호)
+| G Am7 | G/B | C/E | Cm/Eb |
+| G/D | A7/C# | Am7 | F |
+
+[Interlude 2]             # 일렉 기타
+| Am . . C? | G/B | C . . Em? | D |      # C, Em 위치는 4박으로 읽음 (악보상 애매)
+| Am | G/B | C | D |
+
+[Bridge]                  # C, 1번 괄호
+| Am11 | G/B | Cadd9 | D |
+| Am11 | G/B | Cadd9 | D |
+
+[Bridge]                  # C, 2번 괄호
+| Am11 | G/B | Cadd9 | D |
+| Am11 | G/B | Cadd9 | D E |
+
+[Key: A]
+[Chorus]                  # B (A키)
+| A Bm7 | A/C# | D/F# | Dm/F |
+| A/E | B7/D# | Bm7 | G |
+
+[Chorus]                  # B'
+| A Bm7 | A/C# | D/F# | Dm/F |
+| A/E | B7/D# | Bm7 | G |
+
+[Outro]
+| D | E A/C# | D | E |
+| D | E A/C# | D | E |
+| A |

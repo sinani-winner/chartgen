@@ -74,3 +74,12 @@ def test_free_intro_timing_is_lenient():
     pred = "[Intro] (free)\n| C . . G | F |\n[V]\n| C |"
     s = m(ref, pred)
     assert s["timing_f"] == 1.0
+
+
+def test_modulation_after_skipped_repeat_still_counts():
+    # prediction plays the modulated chorus once instead of twice
+    ref = "Key: G\n[B]\n| Am | D |\n[Key: A]\n[C] x2\n| A | E | D | E |"
+    pred = "Key: G\n[B]\n| Am | D |\n[Key: A]\n[C]\n| A | E | D | E |"
+    s = m(ref, pred)
+    assert s["mod_f"] == 1.0
+    assert s["form_boundary_f"] < 1.0      # the missing repeat is still penalized

@@ -1,0 +1,64 @@
+# 리드시트: data/leadsheets/AWC2022_05.pdf (Anointing Worship Camp 2022 #05)
+# A=Verse, B=Chorus. A2 는 중간(62마디)에서 G로 전조
+Title: 목마른 사슴이 (천관웅) — 어노인팅 AWC2022
+Artist: 천관웅
+URL:                      # 미배정 — data/refs/LINKS.md 참고
+Key: F   BPM: 104   4/4
+
+[Intro]
+| F C/E | Dm7 Am/C | Bb F/A | Gm7 F/A Bb C |
+| F C/E | Dm7 Am/C | Gm Dm/F? Ebadd9 . | Csus4 |
+
+[Verse 1]                 # A1 (1회차)
+| F C/E | Dm7 Am/C | Bb F/A | Gm7 Gm7/A@2 Gm7/Bb@2.5 Bb/C@3 |
+| F C/E | Dm7 Am/C | Bb | C |
+| F C/E | Dm7 Am/C | Bb F/A | Gm7 Gm7/A@2 Gm7/Bb@2.5 Bb/C@3 |
+| F C/E | Dm7 Am/C | Bb | C |
+
+[Chorus]                  # B1
+| F | Gm7 | F/A | Bb C |
+| F | G/B | Bb | C |
+| F | Gm7 | F/A | Bb C |
+| F | G/B | Bb | C |
+
+[Interlude 1]             # 1번 괄호
+| F C/E | Dm7 Am/C | Bb | Csus4 |
+
+[Verse 1]                 # A1 (2회차, 반복)
+| F C/E | Dm7 Am/C | Bb F/A | Gm7 Gm7/A@2 Gm7/Bb@2.5 Bb/C@3 |
+| F C/E | Dm7 Am/C | Bb | C |
+| F C/E | Dm7 Am/C | Bb F/A | Gm7 Gm7/A@2 Gm7/Bb@2.5 Bb/C@3 |
+| F C/E | Dm7 Am/C | Bb | C |
+
+[Chorus]                  # B1
+| F | Gm7 | F/A | Bb C |
+| F | G/B | Bb | C |
+| F | Gm7 | F/A | Bb C |
+| F | G/B | Bb | C |
+
+[Interlude 2]             # 2번 괄호, 일렉 기타
+| Gm7 | C7 | Am7 | Dm7 |
+| Gm7 | F/A | G/B | Csus4 | C |
+
+[Verse 2]                 # A2
+| F C/E | Dm7 Am/C | Bb F/A | Gm7 Bb/C |
+| F C/E | Dm7 Am/C | Bb | C D |
+[Key: G]
+| G | Em7 | C | Am7 C/D |
+| G D/F# | Em7 G/D | F | D |
+
+[Chorus]                  # B2
+| G | Am7 | G/B | C D |
+| G | A/C# | C | D |
+| G | Am7 | G/B | C D |
+| G | A/C# | C | D |
+
+[Chorus]                  # B1 (G키)
+| G | Am7 | G/B | C D |
+| G | A/C# | C | D |
+| G | Am7 | G/B | C D |
+| G | A/C# | C | D |
+
+[Outro]
+| G | Am7 | G/B | C D |
+| G | A/C# | C D | G |

@@ -1,0 +1,85 @@
+# 리드시트: data/leadsheets/AnointingHymns3_04.pdf (Anointing Hymns 3 #04, 메들리)
+# A=Verse, B=Chorus(후렴), C='내게 강 같은 평화' 후렴 → Chorus 2
+Title: 갈 길을 밝히 보이시니 + 내게 강 같은 평화 — 어노인팅 Hymns 3
+Artist: G. F. Root (편곡 어노인팅)
+URL:                      # 미배정 — data/refs/LINKS.md 참고
+Key: G   BPM: 108   4/4
+
+[Intro]                   # 신스 리드
+| G | Am | Bm | C |
+| G/B | C | D | C | . |
+
+[Verse 1]                 # A1, 1번 괄호
+| G | C | D | C |
+| G | C | D | C |
+
+[Verse 1]                 # A1, 2번 괄호
+| G | C | D | C |
+| G | C | D | C/E D/F# |
+
+[Chorus]                  # B
+| G | Am | Bm7 | C |
+| G/B | C | D |
+
+[Interlude 1]
+| G | Am | Bm | C |
+
+[Verse 2]                 # A2, 1번 괄호
+| G | C | D | C |
+| G | C | D | C |
+
+[Verse 2]                 # A2, 2번 괄호
+| G | C | D | C |
+| G | C | D | C/E D/F# |
+
+[Chorus]                  # B, 1번 괄호
+| G | Am | Bm7 | C |
+| G/B | C | D | G |
+
+[Chorus]                  # B, 2번 괄호 → 바로 간주
+| G | Am | Bm7 | C |
+| G/B | C | D |
+
+[Interlude 2]             # 일렉 기타
+| G | Am | Bm | C |
+| G/B | C | D | C |
+
+[Verse 3]                 # A3
+| G | C | D | C |
+| G | C | D | C/E D/F# |
+
+[Chorus]                  # B, 1번 괄호
+| G | Am | Bm7 | C |
+| G/B | C | D | G |
+
+[Chorus]                  # B, 2번 괄호
+| G | Am | Bm7 | C |
+| G/B | C | D |
+
+[Interlude 3]             # 일렉 기타
+| G | Am | Bm | C |
+| G/D | C/E | D/F# | D |
+
+[Chorus 2]                # C1 (내게 강 같은 평화)
+| G | % | C | % |
+| Em | % | F | % |
+| Em | G/B | C | D |
+| Em | D7 | G | Gsus4 |
+
+[Chorus 2]                # C2
+| G | G/B | C | D |
+| Em | A7 | F | D |
+| Em | G/B | C | D |
+| Em | D7 | G | Gsus4 |
+
+[Chorus 2]                # C3
+| G | G/B | C | D |
+| Em | A7 | F | D |
+| Em | G/B | C | D |
+| Em | D7 | G | Gsus4 |
+
+[Chorus 2]                # C1, 3번 괄호
+| G | G/B | C | D |
+| Em | A7 | F | D |
+| Em | G/B | C | D |
+| Em | D7 | G |
