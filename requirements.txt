@@ -1,3 +1,11 @@
-# Phase 1 (채점기): 표준 라이브러리만 사용
 pytest>=8
-# Phase 2부터 추가 예정: yt-dlp, demucs, madmom/beat_this, librosa ...
+# Phase 2: 인식
+numpy
+scipy
+librosa>=0.10
+soundfile
+torch
+torchaudio
+demucs>=4.0
+beat_this
+yt-dlp

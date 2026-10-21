@@ -10,3 +10,4 @@ stems/
 *.m4a
 *.webm
 *.flac
+cache/

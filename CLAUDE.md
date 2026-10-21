@@ -19,6 +19,10 @@
 chartgen/chords.py    코드 기호 파싱 (근음·성격·베이스, 이명동음 동일 취급)
 chartgen/chart.py     차트 텍스트/JSON 형식, 반복 펼치기, 8분음표 타임라인
 chartgen/scoring.py   항목별 채점 (마디 정렬 → 근음/타이밍/성격/베이스/구성/키/가짜)
+chartgen/audio.py     오디오 → 음원 분리(htdemucs_6s) + 박자(beat_this) + 스템별 CQT → cache/<곡>/features.npz
+chartgen/harmony.py   8분음표 박자 축, 크로마/베이스, 근음 Viterbi (위치별 체인지 벌점), 키 추정
+chartgen/assemble.py  인식 결과 → 차트 (오프비트 체인지 = 푸시 '>')
+transcribe.py         인식 CLI (오디오 → runs/<방법>/곡.json)
 evaluate.py           채점 CLI (+ EXPERIMENTS.md 기록)
 check_chart.py        정답 입력 확인 CLI
 data/refs/*.chart     정답 세트 (사람이 입력, 형식: docs/CHART_FORMAT.md)
@@ -30,9 +34,17 @@ tests/                pytest
 - 테스트: `python3 -m pytest -q tests`
 - 정답 확인: `python3 check_chart.py data/refs` (전체) / `python3 check_chart.py data/refs/곡.chart` (펼쳐 보기)
 - 채점: `python3 evaluate.py data/refs runs/<방법> [--diff] [--log "메모"]`
+- 인식: `python3 transcribe.py audio/곡.mp3 --method <방법> [--delete-audio]` (오디오 이름 = 정답 차트 이름)
+- 재인식(캐시만, 튜닝용): `python3 transcribe.py --from-cache --method <방법> --params '{"pen_beat": 2.0}'`
+- 설치: `pip install -r requirements.txt` (모델 가중치는 첫 실행 때 dl.fbaipublicfiles.com, cloud.cp.jku.at 에서 받음)
 
 ## 채점 메모
 - 해상도는 8분음표. 예측 마디는 정답 마디에 근음 기준 DP로 정렬된다(마디 하나 빠져도 뒤가 전부 틀리지 않음). 빠진 마디는 오답, 남는 마디의 체인지는 가짜 체인지.
 - 타이밍: `timing_f`는 8분음표 1개 차이 허용, `timing_f_exact`는 푸시까지 정확해야 인정. free 구간은 마디 단위 허용.
 - 성격(quality)은 근음이 맞은 구간에서만 계산. 가짜 텐션 = 근음은 맞는데 정답에 없는 7th/6th/9th 등을 붙인 코드 개수.
 - 예측 JSON 형식은 `chart_to_dict()` 출력과 같다 (`"format": "chartgen/1"`). 마디별 `start_sec`(영상 싱크용) 선택 필드 있음.
+
+## Phase 2 메모
+- 캐시(`cache/`)에는 오디오가 아니라 스템별 CQT·박 위치만 저장한다 → 오디오는 분석 직후 지워도 튜닝 가능.
+- 코드 어휘는 아직 장/단 3화음 + N.C.뿐 (성격·분수코드는 Phase 3). 구간은 `Song` 하나 (폼은 Phase 4).
+- `Params`의 벌점 값은 합성 신호로만 정한 임시값. 실제 정답 세트 오디오로 튜닝해야 한다.
