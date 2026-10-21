@@ -24,6 +24,7 @@ from .chart import Chart, Timeline, bar_frames, build_timeline, _same
 
 MISSING = object()   # reference frame that has no aligned predicted bar
 GAP_COST = 1.0
+GAP_OPEN = 0.25   # extra cost to start a run of unmatched bars
 
 
 # ---------------------------------------------------------------- alignment
@@ -51,31 +52,41 @@ def _bar_sim(ref_tl, r, pred_tl, p) -> float:
 
 
 def align_bars(ref_tl: Timeline, pred_tl: Timeline):
-    """Return list of (ref_bar | None, pred_bar | None) in order."""
+    """Return list of (ref_bar | None, pred_bar | None) in order.
+
+    Affine-gap alignment: opening a gap costs a little extra, so a skipped
+    repeat shows up as one contiguous gap instead of scattered single bars."""
     R, P = len(ref_tl.bars), len(pred_tl.bars)
     INF = float("inf")
-    cost = [[INF] * (P + 1) for _ in range(R + 1)]
-    back = [[None] * (P + 1) for _ in range(R + 1)]
-    cost[0][0] = 0.0
+    # state 0: match, 1: ref bar unmatched (gap in pred), 2: pred bar unmatched
+    cost = [[[INF] * 3 for _ in range(P + 1)] for _ in range(R + 1)]
+    back = [[[None] * 3 for _ in range(P + 1)] for _ in range(R + 1)]
+    cost[0][0][0] = 0.0
+
+    def relax(i, j, st, v, prev):
+        if v < cost[i][j][st]:
+            cost[i][j][st] = v
+            back[i][j][st] = prev
+
     for i in range(R + 1):
         for j in range(P + 1):
-            c = cost[i][j]
-            if c == INF:
-                continue
-            if i < R and j < P:
-                v = c + 1.0 - _bar_sim(ref_tl, i, pred_tl, j)
-                if v < cost[i + 1][j + 1]:
-                    cost[i + 1][j + 1], back[i + 1][j + 1] = v, (i, j)
-            if i < R and c + GAP_COST < cost[i + 1][j]:
-                cost[i + 1][j], back[i + 1][j] = c + GAP_COST, (i, j)
-            if j < P and c + GAP_COST < cost[i][j + 1]:
-                cost[i][j + 1], back[i][j + 1] = c + GAP_COST, (i, j)
+            for st in range(3):
+                c = cost[i][j][st]
+                if c == INF:
+                    continue
+                if i < R and j < P:
+                    relax(i + 1, j + 1, 0, c + 1.0 - _bar_sim(ref_tl, i, pred_tl, j), (i, j, st))
+                if i < R:
+                    relax(i + 1, j, 1, c + GAP_COST + (0 if st == 1 else GAP_OPEN), (i, j, st))
+                if j < P:
+                    relax(i, j + 1, 2, c + GAP_COST + (0 if st == 2 else GAP_OPEN), (i, j, st))
+    st = min(range(3), key=lambda k: cost[R][P][k])
     pairs = []
     i, j = R, P
     while (i, j) != (0, 0):
-        pi, pj = back[i][j]
+        pi, pj, pst = back[i][j][st]
         pairs.append((pi if pi < i else None, pj if pj < j else None))
-        i, j = pi, pj
+        i, j, st = pi, pj, pst
     pairs.reverse()
     return pairs
 
