@@ -157,7 +157,15 @@
       }
      ],
      "start_sec": 11.84
-    },
+    }
+   ]
+  },
+  {
+   "name": "Intro",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -283,7 +291,7 @@
    ]
   },
   {
-   "name": "Chorus",
+   "name": "Verse",
    "repeat": 1,
    "free": false,
    "notes": [],
@@ -399,7 +407,15 @@
       }
      ],
      "start_sec": 37.42
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -511,7 +527,15 @@
       }
      ],
      "start_sec": 50.24
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -525,15 +549,7 @@
       }
      ],
      "start_sec": 51.84
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -631,7 +647,15 @@
       }
      ],
      "start_sec": 63.04
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -767,15 +791,7 @@
       }
      ],
      "start_sec": 77.42
-    }
-   ]
-  },
-  {
-   "name": "Interlude",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -850,15 +866,7 @@
       }
      ],
      "start_sec": 85.42
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -886,7 +894,15 @@
       }
      ],
      "start_sec": 88.62
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1082,15 +1098,7 @@
       }
      ],
      "start_sec": 111.02
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1123,7 +1131,15 @@
       }
      ],
      "start_sec": 114.22
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1235,7 +1251,15 @@
       }
      ],
      "start_sec": 127.04
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1329,15 +1353,7 @@
       }
      ],
      "start_sec": 136.62
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1477,7 +1493,15 @@
       }
      ],
      "start_sec": 152.62
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1566,15 +1590,7 @@
       }
      ],
      "start_sec": 162.22
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1607,7 +1623,15 @@
       }
      ],
      "start_sec": 165.42
-    },
+    }
+   ]
+  },
+  {
+   "name": "Bridge",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1837,7 +1861,7 @@
    ]
   },
   {
-   "name": "Pre-Chorus",
+   "name": "Bridge",
    "repeat": 1,
    "free": false,
    "notes": [],
@@ -1957,7 +1981,7 @@
    ]
   },
   {
-   "name": "Chorus",
+   "name": "Bridge",
    "repeat": 1,
    "free": false,
    "notes": [],
@@ -2083,7 +2107,15 @@
       }
      ],
      "start_sec": 213.42
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2328,7 +2360,15 @@
       }
      ],
      "start_sec": 239.04
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2444,7 +2484,7 @@
    ]
   },
   {
-   "name": "Chorus",
+   "name": "Bridge",
    "repeat": 1,
    "free": false,
    "notes": [],

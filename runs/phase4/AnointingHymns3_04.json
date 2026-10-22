@@ -131,7 +131,15 @@
       }
      ],
      "start_sec": 15.7
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -159,15 +167,7 @@
       }
      ],
      "start_sec": 20.16
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -251,7 +251,15 @@
       }
      ],
      "start_sec": 33.5
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -363,7 +371,15 @@
       }
      ],
      "start_sec": 51.28
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -396,15 +412,7 @@
       }
      ],
      "start_sec": 55.72
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -488,7 +496,15 @@
       }
      ],
      "start_sec": 69.04
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -516,15 +532,7 @@
       }
      ],
      "start_sec": 73.5
-    }
-   ]
-  },
-  {
-   "name": "Interlude",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -566,15 +574,7 @@
       }
      ],
      "start_sec": 80.16
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -616,7 +616,15 @@
       }
      ],
      "start_sec": 86.84
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -728,7 +736,15 @@
       }
      ],
      "start_sec": 104.62
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -817,15 +833,7 @@
       }
      ],
      "start_sec": 117.96
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -853,7 +861,15 @@
       }
      ],
      "start_sec": 122.4
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -876,7 +892,7 @@
      "events": [
       {
        "beat": 1.0,
-       "chord": "Gm/A#",
+       "chord": "Gm/Bb",
        "conf": 0.95
       },
       {
@@ -970,7 +986,15 @@
       }
      ],
      "start_sec": 140.18
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1136,7 +1160,7 @@
    ]
   },
   {
-   "name": "Chorus",
+   "name": "Verse",
    "repeat": 1,
    "free": false,
    "notes": [],
@@ -1257,7 +1281,15 @@
       }
      ],
      "start_sec": 182.38
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1318,15 +1350,7 @@
       }
      ],
      "start_sec": 191.28
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1382,7 +1406,15 @@
       }
      ],
      "start_sec": 200.18
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1438,15 +1470,7 @@
       }
      ],
      "start_sec": 209.06
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1502,7 +1526,15 @@
       }
      ],
      "start_sec": 217.96
-    },
+    }
+   ]
+  },
+  {
+   "name": "Pre-Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1614,7 +1646,15 @@
       }
      ],
      "start_sec": 235.74
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1670,15 +1710,7 @@
       }
      ],
      "start_sec": 244.62
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1744,7 +1776,15 @@
       }
      ],
      "start_sec": 253.5
-    },
+    }
+   ]
+  },
+  {
+   "name": "Pre-Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1861,7 +1901,15 @@
       }
      ],
      "start_sec": 271.28
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1917,15 +1965,7 @@
       }
      ],
      "start_sec": 280.18
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1981,7 +2021,15 @@
       }
      ],
      "start_sec": 289.08
-    },
+    }
+   ]
+  },
+  {
+   "name": "Pre-Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2093,7 +2141,15 @@
       }
      ],
      "start_sec": 306.86
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2149,15 +2205,7 @@
       }
      ],
      "start_sec": 315.74
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -2213,7 +2261,15 @@
       }
      ],
      "start_sec": 324.64
-    },
+    }
+   ]
+  },
+  {
+   "name": "Pre-Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2325,7 +2381,15 @@
       }
      ],
      "start_sec": 342.42
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2381,15 +2445,7 @@
       }
      ],
      "start_sec": 351.3
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -2445,7 +2501,15 @@
       }
      ],
      "start_sec": 360.2
-    },
+    }
+   ]
+  },
+  {
+   "name": "Pre-Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2557,7 +2621,15 @@
       }
      ],
      "start_sec": 377.98
-    },
+    }
+   ]
+  },
+  {
+   "name": "Bridge",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,

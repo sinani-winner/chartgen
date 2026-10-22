@@ -89,7 +89,15 @@
       }
      ],
      "start_sec": 12.8
-    },
+    }
+   ]
+  },
+  {
+   "name": "Intro",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -219,7 +227,15 @@
       }
      ],
      "start_sec": 37.74
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -410,7 +426,15 @@
       }
      ],
      "start_sec": 75.14
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -461,7 +485,7 @@
      "events": [
       {
        "beat": 1.0,
-       "chord": "Cm/D#",
+       "chord": "Cm/Eb",
        "conf": 0.71
       }
      ],
@@ -522,7 +546,15 @@
       }
      ],
      "start_sec": 100.06
-    },
+    }
+   ]
+  },
+  {
+   "name": "Interlude",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -652,7 +684,15 @@
       }
      ],
      "start_sec": 125.0
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -713,7 +753,15 @@
       }
      ],
      "start_sec": 137.48
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -764,7 +812,7 @@
      "events": [
       {
        "beat": 1.0,
-       "chord": "Cm/D#",
+       "chord": "Cm/Eb",
        "conf": 0.59
       }
      ],
@@ -834,7 +882,7 @@
    ]
   },
   {
-   "name": "Verse",
+   "name": "Chorus",
    "repeat": 1,
    "free": false,
    "notes": [],
@@ -889,7 +937,7 @@
      "events": [
       {
        "beat": 1.0,
-       "chord": "Cm/D#",
+       "chord": "Cm/Eb",
        "conf": 0.73
       }
      ],
@@ -950,7 +998,15 @@
       }
      ],
      "start_sec": 187.34
-    },
+    }
+   ]
+  },
+  {
+   "name": "Interlude",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -978,15 +1034,7 @@
       }
      ],
      "start_sec": 193.56
-    }
-   ]
-  },
-  {
-   "name": "Interlude",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1056,15 +1104,7 @@
       }
      ],
      "start_sec": 209.16
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1078,7 +1118,15 @@
       }
      ],
      "start_sec": 212.28
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1190,7 +1238,15 @@
       }
      ],
      "start_sec": 237.22
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1288,15 +1344,7 @@
       }
      ],
      "start_sec": 259.02
-    }
-   ]
-  },
-  {
-   "name": "Pre-Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1310,7 +1358,15 @@
       }
      ],
      "start_sec": 262.16
-    },
+    }
+   ]
+  },
+  {
+   "name": "Bridge",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1368,7 +1424,15 @@
       }
      ],
      "start_sec": 274.6
-    },
+    }
+   ]
+  },
+  {
+   "name": "Bridge",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1396,7 +1460,7 @@
      "events": [
       {
        "beat": 1.0,
-       "chord": "B/D#",
+       "chord": "B/Eb",
        "conf": 0.51
       }
      ],
@@ -1489,7 +1553,15 @@
       }
      ],
      "start_sec": 299.54
-    },
+    }
+   ]
+  },
+  {
+   "name": "Bridge",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1503,15 +1575,7 @@
       }
      ],
      "start_sec": 302.66
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1609,7 +1673,15 @@
       }
      ],
      "start_sec": 324.48
-    },
+    }
+   ]
+  },
+  {
+   "name": "Outro",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1623,15 +1695,7 @@
       }
      ],
      "start_sec": 327.6
-    }
-   ]
-  },
-  {
-   "name": "Outro",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,

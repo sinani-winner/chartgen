@@ -26,7 +26,8 @@ chartgen/chart.py     차트 텍스트/JSON 형식, 반복 펼치기, 8분음표
 chartgen/scoring.py   항목별 채점 (마디 정렬 → 근음/타이밍/성격/베이스/구성/키/가짜)
 chartgen/audio.py     오디오 → 음원 분리(htdemucs_6s) + 박자(beat_this) + 스템별 CQT → cache/<곡>/features.npz
 chartgen/harmony.py   8분음표 박자 축, 크로마/베이스, (코드×베이스) Viterbi (위치별 체인지 벌점), 키 추정
-chartgen/assemble.py  인식 결과 → 차트 (오프비트 체인지 = 푸시 '>')
+chartgen/structure.py 마디별 키·전조, 구성(구간 나누기·묶기·이름)
+chartgen/assemble.py  인식 결과 → 차트 (오프비트 체인지 = 푸시 '>', 키에 맞춘 음 이름 표기)
 transcribe.py         인식 CLI (오디오 → runs/<방법>/곡.json)
 evaluate.py           채점 CLI (+ EXPERIMENTS.md 기록)
 check_chart.py        정답 입력 확인 CLI
@@ -34,6 +35,8 @@ data/refs/*.chart     정답 세트 (사람이 입력, 형식: docs/CHART_FORMAT
 runs/<방법>/*.json    방법별 예측 결과 (정답과 같은 파일 이름)
 tools/tune.py         캐시로 Params 탐색 / 한 곡씩 빼고 튜닝(--loo)
 tools/diagnose.py     근음 오류 유형 분석
+tools/tune_form.py    구성 설정 탐색 (경계+순서+이름)
+tools/form_view.py    정답 구간 ↔ 인식 구간 나란히 보기
 tests/                pytest
 ```
 
@@ -68,3 +71,14 @@ tests/                pytest
 - 해 봤는데 효과 없어서 뺀 것: 3음 대비 항(근음 급락), D/E 상태에 7sus4 모양 허용(변화 없음), 화성 음역 하한 올리기(악화).
 - 남은 오류: AWC2025_03의 D/E를 밴드가 E·A·B·D(sus)로 쳐서 E로 읽힘(271프레임), X/3음 ↔ 3음 단3화음 혼동(A/C#→C#m, G/B→Bm),
   AWC2023_14 Gmaj7→Bm (프리코러스·후렴에 몰림, 라이브 편곡 차이일 수도 — 귀로 확인 필요).
+
+## Phase 4 메모 (2026-10-22: 키 62→98.4 / 전조F 50 / 구성 경계 53.5·순서 53.7·이름 62.9)
+- 정답 세트에 free/stop 표시가 없어 프리·스탑은 채점 불가 → 아직 구현 안 함.
+- 키: 인식된 코드가 장조 음계 어디에 맞는지로 마디별 키 Viterbi (`local_keys`, 장조만). 반복 구간이 반음/온음 올려
+  반복되면 그 구간 키를 올림. 남은 오류: AWC2022_16 전조(G→A)를 8마디 늦게 잡음 (그 후렴 코드 인식 오류가 G에 맞음).
+- 구성: 경계 신호 DP (코드 진행 변화, 반복 시작 지점, 보컬 on/off, 8마디 선호, 구간당 비용).
+  "반복되는 덩어리" 보너스를 크게 주면 벌스+후렴이 16마디로 합쳐진다 → w_rep 작게 (`tests/test_structure.py`가 막아 줌).
+  나누기는 크로마 유사도, 묶기는 코드 이름(+크로마 0.3) 유사도. 후렴 = 가장 크게 부른 반복 묶음.
+- 해 봤는데 뺀 것: 같은 이름 연속 구간 합치기(경계 53→40), 음정만 크로마 대신 코드만 쓰기(이름 정확도 낮음).
+- 5곡뿐이라 구성 점수는 설정에 따라 출렁인다. 리드시트 기준 정답이라 라이브에서 더 부른 반복은 정답에 없다.
+- 오디오 원본은 2026-10-22 삭제 (분석 결과는 cache/에 있음).

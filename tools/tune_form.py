@@ -18,14 +18,17 @@ from chartgen.scoring import score  # noqa: E402
 from chartgen.structure import analyze_form  # noqa: E402
 
 GRID = {
-    "w_rep": [0.5, 1.0, 1.5, 2.0],
+    "w_rep": [0.0, 0.5, 1.0],
+    "w_stripe": [1.0, 2.0, 3.0],
     "w_voc": [0.5, 1.0, 2.0],
     "w_nov": [0.0, 0.5, 1.0],
-    "seg_cost": [0.5, 1.0, 1.5, 2.0],
+    "seg_cost": [0.5, 1.0, 1.5],
     "cluster_thr": [0.45, 0.55, 0.65],
     "w_chroma": [0.0, 0.7, 1.0],
+    "cluster_chroma": [0.0, 0.3, 0.6],
 }
-DEFAULT = {"w_rep": 1.0, "w_voc": 8.0, "w_nov": 2.0, "seg_cost": 3.0, "cluster_thr": 0.55, "w_chroma": 1.0}
+DEFAULT = {"w_rep": 1.0, "w_voc": 0.5, "w_nov": 0.5, "w_stripe": 2.0, "seg_cost": 1.0, "cluster_thr": 0.45,
+           "w_chroma": 1.0, "cluster_chroma": 0.3}
 
 
 def load(cache, refs):

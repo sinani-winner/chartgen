@@ -1,6 +1,5 @@
 """Phase 4: key tracking and form on hand-made chord paths (no audio)."""
 import numpy as np
-import pytest
 
 from chartgen.harmony import N_BASS, make_grid
 from chartgen.structure import analyze_form, local_keys
@@ -36,7 +35,6 @@ def test_local_keys_find_whole_step_modulation():
     assert abs(change - 24) <= 1
 
 
-@pytest.mark.xfail(reason="작업 중: 반복 점수가 벌스+후렴을 16마디 하나로 묶음 — 경계 신호 방식으로 교체 중", strict=False)
 def test_form_splits_verse_and_chorus_and_names_them():
     bars = [[G, G]] * 4 + VERSE_G + CHORUS_G + VERSE_G + CHORUS_G + CHORUS_G
     path, grid = path_from_bars(bars)

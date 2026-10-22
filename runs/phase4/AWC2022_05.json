@@ -283,7 +283,15 @@
       }
      ],
      "start_sec": 32.66
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -484,7 +492,15 @@
       }
      ],
      "start_sec": 60.32
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -601,7 +617,15 @@
       }
      ],
      "start_sec": 78.8
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -662,15 +686,7 @@
       }
      ],
      "start_sec": 88.04
-    }
-   ]
-  },
-  {
-   "name": "Verse",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -736,7 +752,15 @@
       }
      ],
      "start_sec": 97.26
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -868,7 +892,15 @@
       }
      ],
      "start_sec": 115.72
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -939,15 +971,7 @@
       }
      ],
      "start_sec": 124.98
-    }
-   ]
-  },
-  {
-   "name": "Verse",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1018,7 +1042,15 @@
       }
      ],
      "start_sec": 134.2
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1135,7 +1167,15 @@
       }
      ],
      "start_sec": 152.66
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1177,15 +1217,7 @@
       }
      ],
      "start_sec": 159.58
-    }
-   ]
-  },
-  {
-   "name": "Verse",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1260,7 +1292,15 @@
       }
      ],
      "start_sec": 171.12
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1372,7 +1412,15 @@
       }
      ],
      "start_sec": 189.58
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1419,15 +1467,7 @@
       }
      ],
      "start_sec": 196.5
-    }
-   ]
-  },
-  {
-   "name": "Pre-Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1531,7 +1571,15 @@
       }
      ],
      "start_sec": 210.34
-    },
+    }
+   ]
+  },
+  {
+   "name": "Verse",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "directive": "key",
      "value": "G"
@@ -1667,7 +1715,15 @@
       }
      ],
      "start_sec": 228.8
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1695,15 +1751,7 @@
       }
      ],
      "start_sec": 233.42
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -1792,7 +1840,15 @@
       }
      ],
      "start_sec": 247.28
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1909,7 +1965,15 @@
       }
      ],
      "start_sec": 265.74
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -1937,15 +2001,7 @@
       }
      ],
      "start_sec": 270.34
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -2034,7 +2090,15 @@
       }
      ],
      "start_sec": 284.2
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2151,7 +2215,15 @@
       }
      ],
      "start_sec": 302.66
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2179,15 +2251,7 @@
       }
      ],
      "start_sec": 307.28
-    }
-   ]
-  },
-  {
-   "name": "Interlude",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -2215,7 +2279,15 @@
       }
      ],
      "start_sec": 311.88
-    },
+    }
+   ]
+  },
+  {
+   "name": "Interlude",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2332,7 +2404,15 @@
       }
      ],
      "start_sec": 330.26
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2360,15 +2440,7 @@
       }
      ],
      "start_sec": 336.16
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -2457,7 +2529,15 @@
       }
      ],
      "start_sec": 354.84
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2574,7 +2654,15 @@
       }
      ],
      "start_sec": 381.26
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2602,15 +2690,7 @@
       }
      ],
      "start_sec": 388.0
-    }
-   ]
-  },
-  {
-   "name": "Chorus",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,
@@ -2699,7 +2779,15 @@
       }
      ],
      "start_sec": 408.9
-    },
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2816,7 +2904,15 @@
       }
      ],
      "start_sec": 437.06
-    },
+    }
+   ]
+  },
+  {
+   "name": "Outro",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
     {
      "time": [
       4,
@@ -2844,15 +2940,7 @@
       }
      ],
      "start_sec": 444.7
-    }
-   ]
-  },
-  {
-   "name": "Outro",
-   "repeat": 1,
-   "free": false,
-   "notes": [],
-   "items": [
+    },
     {
      "time": [
       4,

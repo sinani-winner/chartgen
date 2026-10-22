@@ -9,23 +9,40 @@ SHARP_KEYS_MAJOR = {7, 2, 9, 4, 11, 6}    # G D A E B F#
 SHARP_KEYS_MINOR = {4, 11, 6, 1, 8}       # Em Bm F#m C#m G#m
 
 
+LETTERS = "CDEFGAB"
+LETTER_PC = {"C": 0, "D": 2, "E": 4, "F": 5, "G": 7, "A": 9, "B": 11}
+# scale degree (semitones above the tonic) → (letter steps above the tonic letter)
+# diatonic degrees use the scale letter; outside notes follow common chart usage:
+# b2, b3, #4, b6, b7 (Eb in C, F# in C, Bb in C ...)
+DEGREE_LETTER = {0: 0, 1: 1, 2: 1, 3: 2, 4: 2, 5: 3, 6: 3, 7: 4, 8: 5, 9: 5, 10: 6, 11: 6}
+
+
 def key_name(tonic: int, minor: bool) -> str:
     sharp = tonic in (SHARP_KEYS_MINOR if minor else SHARP_KEYS_MAJOR)
     return (PC_NAMES_SHARP if sharp else PC_NAMES_FLAT)[tonic] + ("m" if minor else "")
+
+
+def spell(pc: int, key: tuple) -> str:
+    """Note name for pitch class pc in a major key (minor keys use their relative major)."""
+    tonic = key[0] if not key[1] else (key[0] + 3) % 12
+    tname = key_name(tonic, False)
+    tletter = LETTERS.index(tname[0])
+    letter = LETTERS[(tletter + DEGREE_LETTER[(pc - tonic) % 12]) % 7]
+    acc = (pc - LETTER_PC[letter] + 6) % 12 - 6          # -2..+2 semitones
+    if abs(acc) > 1:                                      # never write double accidentals
+        return (PC_NAMES_SHARP if "#" in tname else PC_NAMES_FLAT)[pc]
+    return letter + ("#" if acc == 1 else "b" if acc == -1 else "")
 
 
 def chord_name(idx: int, key: tuple) -> str:
     """State index → chord symbol spelled for the key (slash bass when bass ≠ root)."""
     if idx == NC:
         return "N.C."
-    tonic, minor = key
-    sharp = tonic in (SHARP_KEYS_MINOR if minor else SHARP_KEYS_MAJOR)
-    names = PC_NAMES_SHARP if sharp else PC_NAMES_FLAT
     c = state_chord(idx)
-    name = names[c % 12] + ("m" if chord_is_minor(idx) else "")
+    name = spell(c % 12, key) + ("m" if chord_is_minor(idx) else "")
     b = state_bass(idx)
     if b != c % 12:
-        name += "/" + names[b]
+        name += "/" + spell(b, key)
     return name
 
 

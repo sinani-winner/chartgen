@@ -172,29 +172,33 @@ def stripe_starts(sim: BarSim, look=4, back=2) -> np.ndarray:
     match some other place in the song while the `back` bars before don't."""
     n = sim.n
     out = np.zeros(n + 1)
-    for b in range(1, n):
+    for b in range(back, n):
         L = min(look, n - b)
+        c = np.arange(back, n - L + 1)
+        c = c[np.abs(c - b) >= look]
+        if not len(c):
+            continue
         best = 0.0
         for k in (0, 1, 2):
-            M = sim.S[k]
-            for c in range(back, n - L + 1):
-                if abs(c - b) < look:
-                    continue
-                ahead = M[np.arange(b, b + L), np.arange(c, c + L)].mean()
-                m = min(back, b, c)
-                before = M[np.arange(b - m, b), np.arange(c - m, c)].mean() if m else 0.0
-                best = max(best, ahead - before)
+            P = sim.P[k]
+            ahead = (P[b + L, c + L] - P[b, c]) / L
+            before = (P[b, c] - P[b - back, c - back]) / back
+            best = max(best, float((ahead - before).max()))
         out[b] = best
     out[0] = out[n] = 1.0
     return out
 
 
-def segment(sim: BarSim, vocal, w_rep=1.0, w_voc=8.0, w_nov=2.0, seg_cost=3.0, w_stripe=0.0,
+def segment(sim: BarSim, vocal, w_rep=1.0, w_voc=0.5, w_nov=0.5, seg_cost=1.0, w_stripe=2.0,
             min_len=2, max_len=17):
-    """DP segmentation into sections. Per section: phrase-length prior, a block
-    that repeats elsewhere (reward grows with its length), vocal on/off
-    consistency, starting where the material changes (novelty), minus a fixed
-    cost per section so the song isn't chopped into tiny pieces."""
+    """DP segmentation into sections, driven by boundary cues: phrase-length
+    prior (8 bars best), vocal on/off consistency inside a section, starting
+    where the material changes (novelty) or where a repeated passage starts
+    (stripe), minus a fixed cost per section.
+
+    w_rep (reward for a block that repeats elsewhere) must stay small: a
+    repeated verse+chorus pair scores as well as one 16-bar block, so it
+    merges sections instead of finding them."""
     n = sim.n
     voc_on = vocal > 0.35
     S0 = sim.S[0]
@@ -214,7 +218,8 @@ def segment(sim: BarSim, vocal, w_rep=1.0, w_voc=8.0, w_nov=2.0, seg_cost=3.0, w
             L = e - s
             v = voc_on[s:e]
             cons = max(v.mean(), 1 - v.mean())
-            sc = (len_prior(L) + w_rep * sim.best_repeat(s, L) * L / 8 + w_voc * (cons - 1) * 2
+            rep = sim.best_repeat(s, L) * L / 8 if w_rep else 0.0
+            sc = (len_prior(L) + w_rep * rep + w_voc * (cons - 1) * 2
                   + w_nov * nov[s] + w_stripe * stripe[s] - seg_cost)
             if best[s] + sc > best[e]:
                 best[e], back[e] = best[s] + sc, s
@@ -270,7 +275,16 @@ def name_sections(segs, labels, vocal):
     count = {}
     for i in vocal_idx:
         count[labels[i]] = count.get(labels[i], 0) + 1
-    chorus = labels[last_v] if count[labels[last_v]] >= 2 else max(count, key=count.get)
+    # chorus = the repeated vocal group sung loudest (worship choruses are the
+    # big, full-band part); fall back to the most repeated group
+    energy = {}
+    for i in vocal_idx:
+        s, e = segs[i]
+        energy.setdefault(labels[i], []).append(float(np.mean(vocal[s:e])))
+    rep = [l for l in count if count[l] >= 2]
+    last = {labels[i]: i for i in vocal_idx}
+    chorus = (max(rep, key=lambda l: (round(float(np.mean(energy[l])), 1), count[l], last[l]))
+              if rep else max(count, key=count.get))
     verse = labels[first_v] if labels[first_v] != chorus else None
     chorus_pos = [i for i in vocal_idx if labels[i] == chorus]
     second_chorus = chorus_pos[1] if len(chorus_pos) > 1 else n
@@ -307,9 +321,12 @@ def bar_chroma(harm: np.ndarray, grid: Grid) -> np.ndarray:
 def analyze_form(path, grid: Grid, vocal_per_bar, keys, harm=None, **kw):
     """→ (sections [(first_bar, end_bar, name)], keys per bar adjusted by transposed repeats)."""
     chroma = bar_chroma(harm, grid) if harm is not None else None
-    sim = BarSim(bar_chords(path, grid), chroma, kw.get("w_chroma", 1.0))
+    bars = bar_chords(path, grid)
+    sim = BarSim(bars, chroma, kw.get("w_chroma", 1.0))
     segs = segment(sim, vocal_per_bar, **{k: v for k, v in kw.items() if k in ("w_rep", "w_voc", "w_nov", "seg_cost", "w_stripe")})
-    labels, shifts = cluster(sim, segs, thr=kw.get("cluster_thr", 0.55))
+    # grouping uses chord names: in one key every chord sounds alike to chroma
+    csim = BarSim(bars, chroma, kw.get("cluster_chroma", 0.3))
+    labels, shifts = cluster(csim, segs, thr=kw.get("cluster_thr", 0.45))
     names = name_sections(segs, labels, vocal_per_bar)
     # a repeat that matches its first instance only after transposing = a modulation:
     # the whole segment takes the first instance's key + shift
