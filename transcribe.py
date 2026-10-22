@@ -18,7 +18,8 @@ from pathlib import Path
 
 from chartgen.assemble import build_chart
 from chartgen.chart import chart_to_dict, load_chart
-from chartgen.harmony import Params, recognize
+from chartgen.harmony import Params, prepare, recognize, vocal_per_bar
+from chartgen.structure import analyze_form
 
 ROOT = Path(__file__).resolve().parent
 
@@ -26,13 +27,15 @@ ROOT = Path(__file__).resolve().parent
 def run_one(name, feats_path, out_dir, params, refs):
     from chartgen.audio import load_features
     feats = load_features(feats_path)
-    path, conf, grid, key = recognize(feats, params)
+    prep = prepare(feats)
+    path, conf, grid, key = recognize(feats, params, prep)
     meta = {}
     ref = refs / f"{name}.chart"
     if ref.exists():
         rm = load_chart(ref).meta
         meta = {k: rm[k] for k in ("title", "url") if k in rm}
-    chart = build_chart(path, conf, grid, key, meta)
+    sections, key = analyze_form(path, grid, vocal_per_bar(feats, grid), key, harm=prep[1])
+    chart = build_chart(path, conf, grid, key, meta, sections=sections)
     out = out_dir / f"{name}.json"
     out.write_text(json.dumps(chart_to_dict(chart), ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{name}: {len(grid.bar_start)}마디, 키 {chart.meta['key']} → {out}")

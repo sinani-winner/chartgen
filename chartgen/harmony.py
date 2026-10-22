@@ -441,11 +441,21 @@ def prepare(feats: dict, peak: float | None = 1.0, harm_lo_midi: int = 36):
 
 
 def recognize(feats: dict, p: Params | None = None, prepared=None):
-    """Cached features → (path, conf, grid, key)."""
+    """Cached features → (path, conf, grid, key). key is a list with one (tonic, minor) per bar."""
     p = p or Params()
     grid, harm, bass, energy = prepared or prepare(feats)
     E = emissions(harm, bass, energy, p)
     path = decode(E, grid, p)
     conf = segment_confidence(E, path)
-    key = estimate_key(harm.sum(0))
+    from .structure import local_keys
+    key = [(k, False) for k in local_keys(path, grid)]
     return path, conf, grid, key
+
+
+def vocal_per_bar(feats: dict, grid: Grid) -> np.ndarray:
+    """Vocal-stem energy per bar, relative to the song median (≈1 while singing)."""
+    v = pool_frames(np.expm1(np.maximum(feats["cqt_vocals"], 0)) / 100.0, grid,
+                    int(feats["sr"]), int(feats["hop"])).sum(1)
+    per = np.array([v[grid.frame_bar == b].mean() if (grid.frame_bar == b).any() else 0.0
+                    for b in range(len(grid.bar_start))])
+    return per / max(float(np.median(per)), 1e-9)

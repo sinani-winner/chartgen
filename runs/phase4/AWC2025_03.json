@@ -1,0 +1,2708 @@
+{
+ "format": "chartgen/1",
+ "meta": {
+  "time": [
+   4,
+   4
+  ],
+  "key": "A",
+  "title": "예수 나의 첫사랑 되시네 (Jesus You Alone) — 어노인팅 AWC2025",
+  "url": "https://music.youtube.com/watch?v=qottXwI4i70"
+ },
+ "sections": [
+  {
+   "name": "Intro",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "B",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.57
+      }
+     ],
+     "start_sec": 0.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 2.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "B",
+       "conf": 0.96
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.55
+      }
+     ],
+     "start_sec": 3.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Em",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 5.44
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 7.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.77
+      },
+      {
+       "beat": 3.0,
+       "chord": "E",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 8.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 10.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.82
+      },
+      {
+       "beat": 3.0,
+       "chord": "Em",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 11.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 13.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.75
+      }
+     ],
+     "start_sec": 15.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 16.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.94
+      }
+     ],
+     "start_sec": 18.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 19.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.78
+      }
+     ],
+     "start_sec": 21.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.92
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.6
+      }
+     ],
+     "start_sec": 23.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A/C#",
+       "conf": 0.6
+      },
+      {
+       "beat": 3.0,
+       "chord": "E",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 24.6
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.87
+      }
+     ],
+     "start_sec": 26.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 27.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 29.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.94
+      }
+     ],
+     "start_sec": 31.04
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 32.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.63
+      }
+     ],
+     "start_sec": 34.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 35.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 37.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.77
+      }
+     ],
+     "start_sec": 39.04
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 40.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 42.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 43.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 45.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 47.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 48.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 50.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 51.84
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 53.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 55.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.62
+      }
+     ],
+     "start_sec": 56.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 58.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 59.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.94
+      }
+     ],
+     "start_sec": 61.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.56
+      }
+     ],
+     "start_sec": 63.04
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.79
+      }
+     ],
+     "start_sec": 64.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 66.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.79
+      }
+     ],
+     "start_sec": 67.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.73
+      }
+     ],
+     "start_sec": 69.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 71.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      },
+      {
+       "beat": 3.0,
+       "chord": "C#m",
+       "conf": 0.69
+      }
+     ],
+     "start_sec": 72.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.75
+      },
+      {
+       "beat": 3.0,
+       "chord": "E",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 74.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 75.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "B/D#",
+       "conf": 0.53
+      }
+     ],
+     "start_sec": 77.42
+    }
+   ]
+  },
+  {
+   "name": "Interlude",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 79.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 80.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 82.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.75
+      }
+     ],
+     "start_sec": 83.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.63
+      }
+     ],
+     "start_sec": 85.42
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.75
+      }
+     ],
+     "start_sec": 87.0
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.58
+      }
+     ],
+     "start_sec": 88.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 90.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 91.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 93.44
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.69
+      }
+     ],
+     "start_sec": 95.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 96.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 98.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 99.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 101.44
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 103.04
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 104.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 106.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.78
+      }
+     ],
+     "start_sec": 107.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 109.44
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 111.02
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 112.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.91
+      },
+      {
+       "beat": 3.0,
+       "chord": "C#m",
+       "conf": 0.94
+      }
+     ],
+     "start_sec": 114.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 115.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.57
+      }
+     ],
+     "start_sec": 117.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.72
+      }
+     ],
+     "start_sec": 119.04
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.85
+      }
+     ],
+     "start_sec": 120.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 122.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 123.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 125.44
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 127.04
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 128.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.9
+      }
+     ],
+     "start_sec": 130.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A/C#",
+       "conf": 0.63
+      }
+     ],
+     "start_sec": 131.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.63
+      }
+     ],
+     "start_sec": 133.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 135.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.79
+      },
+      {
+       "beat": 3.0,
+       "chord": "Em",
+       "conf": 0.78
+      }
+     ],
+     "start_sec": 136.62
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.88
+      }
+     ],
+     "start_sec": 138.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.88
+      }
+     ],
+     "start_sec": 139.84
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 141.44
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 143.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 144.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 146.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 147.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 149.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.87
+      }
+     ],
+     "start_sec": 151.04
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#",
+       "conf": 0.62
+      }
+     ],
+     "start_sec": 152.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "B",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 154.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 155.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.8
+      }
+     ],
+     "start_sec": 157.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.8
+      }
+     ],
+     "start_sec": 159.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 160.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 162.22
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.63
+      }
+     ],
+     "start_sec": 163.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.68
+      }
+     ],
+     "start_sec": 165.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      },
+      {
+       "beat": 3.0,
+       "chord": "C#m",
+       "conf": 0.77
+      }
+     ],
+     "start_sec": 167.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.77
+      }
+     ],
+     "start_sec": 168.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 170.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A/C#",
+       "conf": 0.81
+      },
+      {
+       "beat": 3.0,
+       "chord": "E",
+       "conf": 0.79
+      }
+     ],
+     "start_sec": 171.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      },
+      {
+       "beat": 3.0,
+       "chord": "D",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 173.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m/E",
+       "conf": 0.68
+      }
+     ],
+     "start_sec": 175.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.86
+      }
+     ],
+     "start_sec": 176.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.63
+      }
+     ],
+     "start_sec": 178.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.63
+      }
+     ],
+     "start_sec": 179.86
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.85
+      }
+     ],
+     "start_sec": 181.46
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "B",
+       "conf": 0.9
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 183.04
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.64
+      }
+     ],
+     "start_sec": 184.64
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.65
+      },
+      {
+       "beat": 3.0,
+       "chord": "F#m",
+       "conf": 0.76
+      }
+     ],
+     "start_sec": 186.26
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.76
+      }
+     ],
+     "start_sec": 187.86
+    }
+   ]
+  },
+  {
+   "name": "Pre-Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      }
+     ],
+     "start_sec": 189.44
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A/C#",
+       "conf": 0.73
+      }
+     ],
+     "start_sec": 191.06
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.7
+      }
+     ],
+     "start_sec": 192.66
+    },
+    {
+     "time": [
+      5,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "B/D#",
+       "conf": 0.7
+      }
+     ],
+     "start_sec": 194.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.9
+      }
+     ],
+     "start_sec": 195.88
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A/C#",
+       "conf": 0.51
+      }
+     ],
+     "start_sec": 197.46
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.68
+      }
+     ],
+     "start_sec": 199.08
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.68
+      }
+     ],
+     "start_sec": 200.66
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 202.28
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A/C#",
+       "conf": 0.6
+      }
+     ],
+     "start_sec": 203.9
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 205.48
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 207.06
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.92
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.85
+      }
+     ],
+     "start_sec": 208.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.84
+      },
+      {
+       "beat": 3.0,
+       "chord": "E",
+       "conf": 0.9
+      }
+     ],
+     "start_sec": 210.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 211.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.85
+      }
+     ],
+     "start_sec": 213.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.97
+      },
+      {
+       "beat": 3.0,
+       "chord": "N.C."
+      }
+     ],
+     "start_sec": 215.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.83
+      }
+     ],
+     "start_sec": 216.6
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.79
+      }
+     ],
+     "start_sec": 218.24
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.97
+      }
+     ],
+     "start_sec": 219.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 221.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.83
+      }
+     ],
+     "start_sec": 223.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 224.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 226.22
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "B",
+       "conf": 0.88
+      }
+     ],
+     "start_sec": 227.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.78
+      }
+     ],
+     "start_sec": 229.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.73
+      }
+     ],
+     "start_sec": 231.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.9
+      }
+     ],
+     "start_sec": 232.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm"
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.66
+      }
+     ],
+     "start_sec": 234.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "D",
+       "conf": 0.66
+      },
+      {
+       "beat": 3.0,
+       "chord": "E",
+       "conf": 0.81
+      }
+     ],
+     "start_sec": 235.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A/C#",
+       "conf": 0.51
+      }
+     ],
+     "start_sec": 237.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.84
+      }
+     ],
+     "start_sec": 239.04
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 240.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.86
+      }
+     ],
+     "start_sec": 242.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.85
+      }
+     ],
+     "start_sec": 243.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 245.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 247.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 248.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.9
+      }
+     ],
+     "start_sec": 250.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 251.82
+    }
+   ]
+  },
+  {
+   "name": "Chorus",
+   "repeat": 1,
+   "free": false,
+   "notes": [],
+   "items": [
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.98
+      }
+     ],
+     "start_sec": 253.4
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.74
+      }
+     ],
+     "start_sec": 255.0
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.64
+      }
+     ],
+     "start_sec": 256.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#",
+       "conf": 0.92
+      }
+     ],
+     "start_sec": 258.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.78
+      }
+     ],
+     "start_sec": 259.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm/D",
+       "conf": 0.62
+      },
+      {
+       "beat": 3.0,
+       "chord": "E",
+       "conf": 0.7
+      }
+     ],
+     "start_sec": 261.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.95
+      }
+     ],
+     "start_sec": 263.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.73
+      }
+     ],
+     "start_sec": 264.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "C#m",
+       "conf": 0.82
+      }
+     ],
+     "start_sec": 266.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "F#m",
+       "conf": 0.89
+      }
+     ],
+     "start_sec": 267.82
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.96
+      }
+     ],
+     "start_sec": 269.42
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.77
+      }
+     ],
+     "start_sec": 271.02
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "Bm",
+       "conf": 0.99
+      },
+      {
+       "beat": 3.0,
+       "chord": "A/C#",
+       "conf": 0.77
+      }
+     ],
+     "start_sec": 272.62
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "E",
+       "conf": 0.93
+      }
+     ],
+     "start_sec": 274.22
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 275.8
+    },
+    {
+     "time": [
+      4,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 277.32
+    },
+    {
+     "time": [
+      3,
+      4
+     ],
+     "events": [
+      {
+       "beat": 1.0,
+       "chord": "A",
+       "conf": 0.91
+      }
+     ],
+     "start_sec": 278.86
+    }
+   ]
+  }
+ ]
+}
